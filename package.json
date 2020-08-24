@@ -1,0 +1,43 @@
+{
+  "name": "daveyeb.com-blazingly-fast",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext .json --ext .js",
+    "prettier": "prettier --write \"**/*.{html,js,md,yml}\"",
+    "test": "npm lint"
+  },
+  "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "emotion-theming": "^10.0.27",
+    "next": "9.5.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "cxs": "^6.2.0",
+    "eslint": "^7.7.0",
+    "eslint-config-get-off-my-lawn": "^5.0.1",
+    "eslint-plugin-react": "^7.20.6",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "2.1.0",
+    "react-ga": "^3.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{html,js,md,yml}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
