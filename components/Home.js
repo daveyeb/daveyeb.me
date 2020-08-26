@@ -9,7 +9,6 @@ export const Container = cxs("div")({
   minHeight: "100vh",
   color: "#333",
   ...content.around,
-
   ...line.end,
   fontFamily: "GT-Pressura-Pro-Mono-Regular",
 });
