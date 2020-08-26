@@ -36,7 +36,7 @@ const ContactInfo = cxs("p")({
 const CopyRight = cxs("div")({
   fontSize: ".8rem",
   textTransform: "uppercase",
-  ...colSize(2.5),
+  ...colSize(2.15),
 });
 
 const Separator = cxs("div")({
