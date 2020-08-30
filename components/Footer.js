@@ -9,17 +9,17 @@ import {
   colOffset,
   colSize,
   padding,
+  order,
 } from "./design/Styles";
 import { A, Break } from "./design";
 
 const Container = cxs("footer")({
-  fontFamily: "GT-Pressura-Pro-Mono-Regular",
-  width: "60%",
+  fontFamily: "GT-Pressura-Pro-Mono-Light",
+  width: "90%",
   ...row,
   margin: "auto auto",
   ...content.start,
   ...line.middle,
-  ...colOffset(2.25),
 });
 
 const Divider = cxs("div")({
@@ -29,14 +29,16 @@ const Divider = cxs("div")({
 
 const ContactInfo = cxs("p")({
   fontSize: ".7rem",
-  ...colSize(6),
+  ...colSize(8),
   ...padding.p(2),
 });
 
 const CopyRight = cxs("div")({
   fontSize: ".8rem",
   textTransform: "uppercase",
-  ...colSize(2.15),
+  ...colSize(12),
+  ...order.last,
+  ...content.center,
 });
 
 const Separator = cxs("div")({
@@ -58,7 +60,6 @@ const Footer = () => {
     <Container>
       <Divider />
       <CopyRight> © 1995-2020 daveyeb </CopyRight>
-      <Separator />
       <ContactInfo>
         This website is built and designed by myself on React.js. <Break />
         Feel free to look/reuse some <A href="/">code</A> or shoot me an{" "}

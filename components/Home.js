@@ -1,27 +1,31 @@
 // eslint-disable-next-line node/no-unpublished-import
 import cxs from "cxs/component";
 
-import { content, padding, colSize, line } from "./design/Styles";
+import { content, padding, colSize, line, margin } from "./design/Styles";
 
 export const Container = cxs("div")({
   display: "flex",
   flexWrap: "wrap",
   minHeight: "100vh",
   color: "#333",
+  ...margin.m(2.5),
   ...content.around,
   ...line.end,
-  fontFamily: "GT-Pressura-Pro-Mono-Regular",
+  fontFamily: "Maelstrom-Sans-Bold",
 });
 
 export const Content = cxs("div")({
-  ...colSize(6),
+  ...colSize(12),
   ...content.start,
-  ...padding.b(3),
-  margin: "12% 0",
+  ...padding.p(0),
+  ...margin.t(3),
+  // ...margin.t(3),
+  // ...margin.l(1.5),
+  // ...margin.r(1.5),
 });
 
 export const LineDrawing = cxs("div")({
-  ...colSize(5),
+  ...colSize(10),
 });
 
 export const Directive = cxs("span")({});

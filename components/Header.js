@@ -9,8 +9,9 @@ import MenuStatusContext from "./MenuStatusContext";
 const Container = cxs("header")({
   fontFamily: "GT-Pressura-Pro-Mono-Light",
   borderBottom: "1px solid",
+  boxShadow: `0 3px 6px rgba(0,0,0,0.04)`,
   height: "33px",
-  ...padding.b(1),
+  ...padding.p(1),
 });
 
 const Content = cxs("div")({
@@ -19,41 +20,46 @@ const Content = cxs("div")({
 
 const Nav = cxs("nav")({
   ...row,
-  ...content.around,
+  ...content.between,
 });
 
 const Controller = cxs("div")({
   ...row,
   ...content.around,
   ...line.middle,
-  ...colSize(4),
+  ...colSize(12),
 });
 
 const Divider = cxs("div")({
   border: "1px solid",
+  boxShadow: `90px 90px 90px rgba(0,0,0,0.04)`,
   height: "100%",
   display: "fixed",
 });
 
 const List = cxs("span")({
   ...row,
-  ...colSize(7),
+  ...colSize(10),
   ...content.around,
   ...line.middle,
 });
 
 const Button = cxs("span")({
   ...row,
-  ...colSize(4),
+  ...colSize(2),
   height: "100%",
-  ...content.around,
+  ...content.between,
   ...line.middle,
   textTransform: "uppercase",
 });
 
-const Indicator = cxs("span")({});
+const Indicator = cxs("span")({
+  ...row,
+  ...colSize(3),
+  ...content.between,
+});
 
-const Links = () => {
+var Links = () => {
   return (
     <>
       <A href="">
@@ -69,6 +75,10 @@ const Links = () => {
   );
 };
 
+Links = cxs(Links)({
+  color: "black",
+});
+
 const Header = ({ page }) => {
   const [status, setStatus] = useContext(MenuStatusContext);
 
@@ -76,7 +86,20 @@ const Header = ({ page }) => {
     <Container>
       <Content>
         <Nav>
-          <A href="/">david yeboah, scientist</A>
+          <A
+            href="/"
+            style={
+              !status
+                ? {
+                    position: "absolute",
+                    display: "inline-block",
+                    marginLeft: "14px",
+                  }
+                : { display: "none" }
+            }
+          >
+            DY
+          </A>
           <Controller>
             <List
               style={

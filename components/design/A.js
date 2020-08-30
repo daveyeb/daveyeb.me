@@ -1,9 +1,10 @@
 import React from "react";
 // eslint-disable-next-line node/no-unpublished-import
 import cxs from "cxs/component";
-import {default as NextLink} from "next/link";
+import { default as NextLink } from "next/link";
 
 const AStyled = cxs("a")({
+  fontFamily: "GT-Pressura-Pro-Mono-Light",
   color: "#1d70b8",
   cursor: "pointer",
   fontSize: "inherit",
@@ -21,10 +22,10 @@ const AStyled = cxs("a")({
   },
 });
 
-const A = ({ href, children, onClick }) => {
+const A = ({ href, children, onClick, style }) => {
   return (
     <NextLink href={href}>
-      <AStyled href={href} onClick={onClick}>
+      <AStyled href={href} onClick={onClick} style={style}>
         {children}
       </AStyled>
     </NextLink>
