@@ -11,7 +11,7 @@ const BHead = ({ title, description, image }) => {
     <NextHead>
       <title>{title}</title>
 
-      <meta charset="utf-8"/>
+      <meta charSet="utf-8" />
 
       <meta content="width=device-width, initial-scale=1" name="viewport" />
 
@@ -43,7 +43,7 @@ const BHead = ({ title, description, image }) => {
 
       <link href="/images/favicon.png" rel="shortcut icon" />
     </NextHead>
-  )
+  );
 };
 
 export default BHead;

@@ -24,7 +24,7 @@ const AStyled = cxs("a")({
 
 const A = ({ href, children, onClick, style }) => {
   return (
-    <NextLink href={href}>
+    <NextLink href={href} passHref>
       <AStyled href={href} onClick={onClick} style={style}>
         {children}
       </AStyled>

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 // eslint-disable-next-line node/no-unpublished-import
 import cxs from "cxs/component";
+import WindowDimensionContext from "./WindowDimensionContext";
 
 import {
   row,
@@ -18,8 +19,11 @@ const Container = cxs("footer")({
   width: "90%",
   ...row,
   margin: "auto auto",
-  ...content.start,
+  ...content.between,
   ...line.middle,
+  "@media screen and (min-width: 62em)": {
+    width: "60%",
+  },
 });
 
 const Divider = cxs("div")({
@@ -31,6 +35,9 @@ const ContactInfo = cxs("p")({
   fontSize: ".7rem",
   ...colSize(8),
   ...padding.p(2),
+  "@media screen and (min-width: 62em)": {
+    ...colSize(4),
+  },
 });
 
 const CopyRight = cxs("div")({
@@ -39,11 +46,20 @@ const CopyRight = cxs("div")({
   ...colSize(12),
   ...order.last,
   ...content.center,
+  "@media screen and (min-width: 62em)": {
+    ...colSize(2),
+    order: 0,
+  },
 });
 
 const Separator = cxs("div")({
   border: "1px solid",
   height: "1.5em",
+  "@media screen and (min-width: 62em)": {
+    ...colSize(0),
+    ...colOffset(0.125),
+    order: 0,
+  },
 });
 
 const ReturnToTop = cxs("div")({
@@ -51,15 +67,20 @@ const ReturnToTop = cxs("div")({
   ...row,
   ...content.around,
   fontSize: "1.4rem",
-  ...colOffset(0.8),
   ...padding.b(0.4),
+  "@media screen and (min-width: 62em)": {
+    ...colSize(1),
+    order: 0,
+  },
 });
 
 const Footer = () => {
+  const [windowWidth, setWindowWidth] = useContext(WindowDimensionContext);
   return (
     <Container>
       <Divider />
       <CopyRight> © 1995-2020 daveyeb </CopyRight>
+      {windowWidth.width > 992 ? <Separator></Separator> : ``}
       <ContactInfo>
         This website is built and designed by myself on React.js. <Break />
         Feel free to look/reuse some <A href="/">code</A> or shoot me an{" "}

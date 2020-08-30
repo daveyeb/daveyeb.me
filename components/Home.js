@@ -6,12 +6,15 @@ import { content, padding, colSize, line, margin } from "./design/Styles";
 export const Container = cxs("div")({
   display: "flex",
   flexWrap: "wrap",
-  minHeight: "100vh",
   color: "#333",
   ...margin.m(2.5),
-  ...content.around,
+  ...content.between,
   ...line.end,
   fontFamily: "Maelstrom-Sans-Bold",
+  "@media screen and (min-width: 62em)": {
+    minHeight: "87vh",
+    ...padding.t(15),
+  },
 });
 
 export const Content = cxs("div")({
@@ -19,6 +22,10 @@ export const Content = cxs("div")({
   ...content.start,
   ...padding.p(0),
   ...margin.t(3),
+  "@media screen and (min-width: 62em)": {
+    ...colSize(6),
+    ...content.start,
+  },
   // ...margin.t(3),
   // ...margin.l(1.5),
   // ...margin.r(1.5),
@@ -26,6 +33,9 @@ export const Content = cxs("div")({
 
 export const LineDrawing = cxs("div")({
   ...colSize(10),
+  "@media screen and (min-width: 62em)": {
+    ...colSize(5),
+  },
 });
 
 export const Directive = cxs("span")({});
