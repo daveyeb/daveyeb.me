@@ -6,7 +6,7 @@ import {
   Content,
   LineDrawing,
   Directive,
-  Image,
+  Portrait,
 } from "../components/Home";
 import { H1, P, A, Break } from "../components/design";
 
@@ -43,7 +43,7 @@ const Home = () => {
             <A href="/">MORE INFO &#10154;</A>
           </Content>
           <LineDrawing>
-            <Image />
+            <Portrait />
           </LineDrawing>
         </Container>
       </Layout>

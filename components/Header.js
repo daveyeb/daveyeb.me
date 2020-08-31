@@ -25,7 +25,7 @@ const Nav = cxs("nav")({
   ...content.between,
   "@media screen and (min-width: 62em)": {
     ...row,
-    ...content.around,
+    ...content.between,
   },
 });
 
@@ -71,7 +71,7 @@ const Button = cxs("span")({
   textTransform: "uppercase",
   "@media screen and (min-width: 62em)": {
     ...colSize(4),
-    ...content.around,
+    ...content.between,
   },
 });
 
