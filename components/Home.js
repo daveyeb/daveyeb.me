@@ -1,7 +1,14 @@
 // eslint-disable-next-line node/no-unpublished-import
 import cxs from "cxs/component";
 
-import { content, padding, colSize, line, margin } from "./design/Styles";
+import {
+  content,
+  padding,
+  colSize,
+  line,
+  margin,
+  colOffset,
+} from "./design/Styles";
 
 export const Container = cxs("div")({
   display: "flex",
@@ -10,9 +17,9 @@ export const Container = cxs("div")({
   ...margin.m(2.5),
   ...content.between,
   ...line.end,
-  fontFamily: "Maelstrom-Sans-Bold",
+  fontFamily: "GT-Pressura-Pro-Mono-Light",
   "@media screen and (min-width: 62em)": {
-    minHeight: "87vh",
+    minHeight: "80vh",
     ...padding.t(15),
   },
 });
@@ -21,21 +28,24 @@ export const Content = cxs("div")({
   ...colSize(12),
   ...content.start,
   ...padding.p(0),
-  ...margin.t(3),
+  ...margin.t(5),
   "@media screen and (min-width: 62em)": {
     ...colSize(6),
     ...content.start,
   },
-  // ...margin.t(3),
-  // ...margin.l(1.5),
-  // ...margin.r(1.5),
 });
 
 export const LineDrawing = cxs("div")({
-  ...colSize(10),
+  ...colSize(12),
+  ...content.start,
+  ...colOffset(1),
+  ...padding.t(5),
   "@media screen and (min-width: 62em)": {
     ...colSize(5),
-    ...margin.t(-15),
+    ...content.center,
+    ...colOffset(0),
+    ...padding.t(0),
+    ...margin.t(-10),
   },
 });
 
@@ -49,8 +59,8 @@ export const Portrait = () => {
       <svg
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 144.000000 276.000000"
-        height="500.000000pt"
-        width="300.000000pt"
+        height="400.000000pt"
+        width="200.000000pt"
         version="1.0"
       >
         <defs id="defs1029">
@@ -61,7 +71,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -73,7 +83,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -713,7 +723,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -725,7 +735,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -737,7 +747,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -749,7 +759,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -761,7 +771,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -773,7 +783,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -785,7 +795,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -796,7 +806,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -808,7 +818,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -820,7 +830,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -831,7 +841,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -843,7 +853,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -854,7 +864,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -866,7 +876,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -878,7 +888,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -890,7 +900,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -901,7 +911,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -913,7 +923,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -924,7 +934,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -936,7 +946,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -948,7 +958,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -960,7 +970,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -971,7 +981,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -983,7 +993,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -995,7 +1005,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1007,7 +1017,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1019,7 +1029,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1031,7 +1041,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1042,7 +1052,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1054,7 +1064,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1066,7 +1076,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1078,7 +1088,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1090,7 +1100,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1102,7 +1112,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1114,7 +1124,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1126,7 +1136,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1138,7 +1148,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1150,7 +1160,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1162,7 +1172,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1174,7 +1184,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1186,7 +1196,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1198,7 +1208,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1210,7 +1220,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1222,7 +1232,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1234,7 +1244,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1246,7 +1256,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1258,7 +1268,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1270,7 +1280,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1282,7 +1292,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1294,7 +1304,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1306,7 +1316,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1318,7 +1328,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1330,7 +1340,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1342,7 +1352,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1354,7 +1364,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1366,7 +1376,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1378,7 +1388,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1390,7 +1400,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1402,7 +1412,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1414,7 +1424,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1426,7 +1436,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1438,7 +1448,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1450,7 +1460,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1462,7 +1472,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1474,7 +1484,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1486,7 +1496,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1498,7 +1508,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1522,7 +1532,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1534,7 +1544,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1558,7 +1568,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1570,7 +1580,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1594,7 +1604,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1606,7 +1616,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1630,7 +1640,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1642,7 +1652,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1666,7 +1676,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1678,7 +1688,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1702,7 +1712,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1714,7 +1724,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1738,7 +1748,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1750,7 +1760,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1774,7 +1784,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1786,7 +1796,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1810,7 +1820,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1822,7 +1832,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1846,7 +1856,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1858,7 +1868,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1882,7 +1892,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1894,7 +1904,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1918,7 +1928,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1930,7 +1940,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1954,7 +1964,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1966,7 +1976,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -1990,7 +2000,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2002,7 +2012,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2026,7 +2036,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2038,7 +2048,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2062,7 +2072,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2074,7 +2084,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2098,7 +2108,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2110,7 +2120,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2134,7 +2144,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2146,7 +2156,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2170,7 +2180,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2182,7 +2192,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2206,7 +2216,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2218,7 +2228,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2242,7 +2252,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2254,7 +2264,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2278,7 +2288,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2290,7 +2300,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2314,7 +2324,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2326,7 +2336,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2350,7 +2360,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2362,7 +2372,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2386,7 +2396,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2398,7 +2408,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2422,7 +2432,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2434,7 +2444,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2458,7 +2468,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2470,7 +2480,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2494,7 +2504,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2506,7 +2516,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2530,7 +2540,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2542,7 +2552,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2566,7 +2576,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2578,7 +2588,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2602,7 +2612,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2614,7 +2624,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2638,7 +2648,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2650,7 +2660,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2674,7 +2684,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2686,7 +2696,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2710,7 +2720,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2722,7 +2732,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2746,7 +2756,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2758,7 +2768,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2782,7 +2792,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2794,7 +2804,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2818,7 +2828,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2830,7 +2840,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2854,7 +2864,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2866,7 +2876,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2890,7 +2900,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2902,7 +2912,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2926,7 +2936,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2938,7 +2948,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2962,7 +2972,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2974,7 +2984,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -2998,7 +3008,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3010,7 +3020,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3034,7 +3044,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3046,7 +3056,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3070,7 +3080,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3082,7 +3092,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3106,7 +3116,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3118,7 +3128,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3142,7 +3152,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3154,7 +3164,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3178,7 +3188,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3190,7 +3200,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3214,7 +3224,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3226,7 +3236,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3250,7 +3260,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3262,7 +3272,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3286,7 +3296,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3298,7 +3308,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3322,7 +3332,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3334,7 +3344,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3358,7 +3368,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3370,7 +3380,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3394,7 +3404,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3406,7 +3416,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3430,7 +3440,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3442,7 +3452,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3466,7 +3476,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3478,7 +3488,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3502,7 +3512,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3514,7 +3524,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3538,7 +3548,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3550,7 +3560,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3574,7 +3584,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",
@@ -3586,7 +3596,7 @@ export const Portrait = () => {
               style={{
                 fill: "none",
                 stroke: "#000000",
-                strokeWidth: "0.564583px",
+                strokeWidth: "2px",
                 strokeLinecap: "butt",
                 strokeLinejoin: "miter",
                 strokeOpacity: "1",

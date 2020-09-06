@@ -2,9 +2,11 @@
 import cxs from "cxs/component";
 
 const H2 = cxs("h2")({
-  fontSize: "1.5rem",
+  fontSize: `2.5em`,
   fontWeight: "400",
+  fontFamily: "GT-Pressura-Pro-Mono-Regular",
   lineHeight: "1.25",
+  opacity: 0.4,
   marginBottom: "20px",
 });
 

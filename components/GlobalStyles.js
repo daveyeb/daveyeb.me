@@ -6,7 +6,8 @@ const GlobalStyles = () => (
       html {
         line-height: 1.15; /* 1 */
         -webkit-text-size-adjust: 100%; /* 2 */
-        color: "#232421";
+        color: #333;
+        background-color: #f5f5f5;
       }
 
       body {
@@ -328,7 +329,6 @@ const GlobalStyles = () => (
         top: 0;
         pointer-events: none;
         z-index: -1;
-        filter: brightness(0.3);
       }
 
       .noise:after {

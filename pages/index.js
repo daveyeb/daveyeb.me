@@ -31,7 +31,7 @@ const Home = () => {
             <Directive
               style={{
                 color: "#555555",
-                fontFamily: "GT-Pressura-Pro-Mono-Light",
+                fontFamily: "GT-Pressura-Pro-Mono-Regular",
                 fontSize: "1em",
                 lineHeight: "1.5rem",
               }}
@@ -40,7 +40,7 @@ const Home = () => {
             </Directive>
             <Break />
             <Break />
-            <A href="/">MORE INFO &#10154;</A>
+            <A href="/about">MORE INFO &#10154;</A>
           </Content>
           <LineDrawing>
             <Portrait />

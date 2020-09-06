@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 // eslint-disable-next-line node/no-unpublished-import
 import cxs from "cxs/component";
-import { default as cxss } from "cxs";
 
 import { padding, content, row, line, colSize } from "./design/Styles";
 import { A } from "./design";
@@ -10,8 +9,7 @@ import WindowDimensionContext from "./WindowDimensionContext";
 
 const Container = cxs("header")({
   fontFamily: "GT-Pressura-Pro-Mono-Light",
-  borderBottom: "1px solid",
-  boxShadow: `0 3px 6px rgba(0,0,0,0.04)`,
+  borderBottom: "1px solid #232421",
   height: "33px",
   ...padding.p(1),
 });
@@ -43,8 +41,7 @@ const Controller = cxs("div")({
 });
 
 const Divider = cxs("div")({
-  border: "1px solid",
-  boxShadow: `90px 90px 90px rgba(0,0,0,0.04)`,
+  borderRight: "1px solid #232421",
   height: "100%",
   display: "fixed",
 });
@@ -86,16 +83,18 @@ const Indicator = cxs("span")({
 });
 
 var Links = () => {
+  const [status, setStatus] = useContext(MenuStatusContext);
+
   return (
     <>
-      <A href="/">
+      <A href="/about" onClick={() => setStatus(false)}>
         ABOUT<sup>1</sup>
       </A>
-      <A href="/">
+      <A href="/projects" onClick={() => setStatus(false)}>
         PROJECTS<sup>1</sup>
       </A>
-      <A href="/">
-        BLOG<sup>1</sup>
+      <A href="/blog" onClick={() => setStatus(false)}>
+        BLOG<sup>0</sup>
       </A>
     </>
   );
@@ -131,6 +130,7 @@ const Header = ({ page }) => {
                     marginLeft: "14px",
                   }
             }
+            onClick={() => setStatus(false)}
           >
             {windowWidth.width < 992 ? `DY` : `david yeboah, scientist`}
           </A>
@@ -149,7 +149,7 @@ const Header = ({ page }) => {
             </List>
             <Button>
               <Divider />
-              <A href="/" onClick={() => setStatus(!status)}>
+              <A href="" onClick={() => setStatus(!status)}>
                 menu
               </A>
             </Button>

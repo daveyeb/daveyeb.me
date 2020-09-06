@@ -3,7 +3,7 @@ import cxs from "cxs/component";
 
 const P = cxs("p")({
   cursor: "default",
-  fontFamily: "GT-Pressura-Pro-Mono-Light",
+  fontFamily: "GT-Pressura-Pro-Mono-Regular",
   lineHeight: "1.5rem",
   margin: "-0.5em 0 0em 0",
   paddingBottom: "1rem",

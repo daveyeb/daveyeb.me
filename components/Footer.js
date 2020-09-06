@@ -27,7 +27,7 @@ const Container = cxs("footer")({
 });
 
 const Divider = cxs("div")({
-  borderBottom: "1px solid",
+  borderBottom: "1px solid #232421",
   ...colSize(12),
 });
 
@@ -53,7 +53,7 @@ const CopyRight = cxs("div")({
 });
 
 const Separator = cxs("div")({
-  border: "1px solid",
+  borderLeft: "1px solid #232421",
   height: "1.5em",
   "@media screen and (min-width: 62em)": {
     ...colSize(0),
@@ -83,11 +83,12 @@ const Footer = () => {
       {windowWidth.width > 992 ? <Separator></Separator> : ``}
       <ContactInfo>
         This website is built and designed by myself on React.js. <Break />
-        Feel free to look/reuse some <A href="/">code</A> or shoot me an{" "}
+        Feel free to look/reuse some{" "}
+        <A href="https://github.com/daveyeb/daveyeb.com">code</A> or shoot me an{" "}
         <A href="/">email</A> :)
       </ContactInfo>
       <ReturnToTop>
-        <A href="/">&#8962;</A>
+        <A href="">&#8962;</A>
       </ReturnToTop>
     </Container>
   );
