@@ -15,9 +15,9 @@ const Home = () => {
     <>
       <Layout
         title={"david yeboah | scientist"}
-        description={"emmanuel is not 808"}
+        description={"Welcome to my personal website | daveyeb.com"}
         image={"/"}
-        page={Home.name.toUpperCase()}
+        page="HOME"
       >
         <Container>
           <Content>

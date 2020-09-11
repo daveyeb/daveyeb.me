@@ -1,15 +1,23 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import { H1, H2, P, A, Break } from "../components/design";
 import { Container, Content } from "../components/Projects";
 
 const Projects = () => {
+  const Router = useRouter();
+
+  useEffect(() => {
+    if (Router.pathname == "/projects") {
+      Router.push("/404");
+    }
+  });
+
   return (
     <>
       <Layout
         title={"david yeboah | scientist"}
-        description={"emmanuel is not 808"}
+        description={"Personal Projects of David Yeboah | daveyeb.com"}
         image={"/"}
         page={Projects.name.toUpperCase()}
       >

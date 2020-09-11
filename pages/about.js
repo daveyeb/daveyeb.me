@@ -1,15 +1,23 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import { H1, H2, P, A, Break } from "../components/design";
 import { Container, Content } from "../components/About";
 
 const About = () => {
+  const Router = useRouter();
+
+  useEffect(() => {
+    if (Router.pathname == "/about") {
+      Router.push("/404");
+    }
+  });
+
   return (
     <>
       <Layout
         title={"david yeboah | scientist"}
-        description={"emmanuel is not 808"}
+        description={"My biography | daveyeb.com"}
         image={"/"}
         page={About.name.toUpperCase()}
       >

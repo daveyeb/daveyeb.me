@@ -85,7 +85,7 @@ const Footer = () => {
         This website is built and designed by myself on React.js. <Break />
         Feel free to look/reuse some{" "}
         <A href="https://github.com/daveyeb/daveyeb.com">code</A> or shoot me an{" "}
-        <A href="/">email</A> :)
+        <A href="mailto:daveyeb@gmail.com">email</A> :)
       </ContactInfo>
       <ReturnToTop>
         <A href="">&#8962;</A>
