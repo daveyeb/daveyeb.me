@@ -23,10 +23,10 @@ const Blog = () => {
       >
         <Container>
           <Content>
-            <H2>Blog</H2>
+            {/* <H2>Blog</H2>
             <Break />
             <Break />
-            <P style={{ color: "#555555" }}> Currently in writing</P>
+            <P style={{ color: "#555555" }}> Currently in writing</P> */}
           </Content>
         </Container>
       </Layout>
