@@ -23,7 +23,7 @@ const Projects = () => {
       >
         <Container>
           <Content>
-            <H2>Projects</H2>
+            {/* <H2>Projects</H2>
             <Break />
             <Break />
             <P style={{ color: "#555555" }}>
@@ -31,7 +31,7 @@ const Projects = () => {
               This module is intended to imitate the operation of the Enigma
               M3/M4 developed during the WWII. This is a one of first
               independent projects I worked during my undergrad.
-            </P>
+            </P> */}
           </Content>
         </Container>
       </Layout>

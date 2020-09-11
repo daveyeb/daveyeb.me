@@ -23,10 +23,10 @@ const About = () => {
       >
         <Container>
           <Content>
-            <H2>About</H2>
+            {/* <H2>About</H2>
             <Break />
-            <Break />
-            <P style={{ color: "#555555" }}>
+            <Break /> */}
+            {/* <P style={{ color: "#555555" }}>
               {" "}
               I am, David, an associate software engineer at Northrop Grumman
               and a recent graduate at Oswego State University in Oswego, NY. I
@@ -67,7 +67,7 @@ const About = () => {
               >
                 resume.
               </A>
-            </P>
+            </P> */}
           </Content>
         </Container>
       </Layout>
