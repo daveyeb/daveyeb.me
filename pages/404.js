@@ -16,12 +16,7 @@ const NotFound = () => {
       >
         <Container>
           <Content>
-            <div
-              style={{
-                ...padding.t(23),
-                ...colOffset(4),
-              }}
-            >
+            <div className={"div-404"}>
               <h1
                 style={{
                   display: "inline-block",
@@ -60,6 +55,19 @@ const NotFound = () => {
               <style jsx>{`
                 body {
                   margin: 0;
+                }
+
+                .div-404 {
+                  padding-top: 200px;
+                  margin-left: 16.6667%;
+                  padding-bottom: 320px;
+                }
+
+                @media screen and (min-width: 62em) {
+                  .div-404 {
+                    padding-top: 184px;
+                    margin-left: 33.3333%;
+                  }
                 }
               `}</style>
             </div>

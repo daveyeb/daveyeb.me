@@ -19,8 +19,8 @@ const Home = () => {
         image={"/"}
         page="HOME"
       >
-        <Container>
-          <Content>
+        <Container className={"container-xrs"}>
+          <Content className={"content-xrs"}>
             <H1>David Yeboah</H1>
             <Break />
             <P style={{ color: "#555555" }}>
@@ -42,7 +42,7 @@ const Home = () => {
             <Break />
             <A href="/about">MORE INFO &#10154;</A>
           </Content>
-          <LineDrawing>
+          <LineDrawing className={"line-xrs"}>
             <Portrait />
           </LineDrawing>
         </Container>
