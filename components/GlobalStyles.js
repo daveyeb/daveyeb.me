@@ -416,6 +416,61 @@ const GlobalStyles = () => (
           transform: translate3d(-7rem, 0, 0);
         }
       }
+
+      .container-xrs {
+        display: flex;
+        flex-wrap: wrap;
+        color: #333;
+        margin: 20px;
+        font-family: "GT-Pressura-Pro-Mono-Light";
+        justify-content: space-between;
+      }
+
+      @media screen and (min-width: 62em) {
+        .container-xrs {
+          min-height: 80vh;
+          padding-top: 120px;
+        }
+      }
+
+      .content-xrs {
+        flex-basis: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin-top: 40px;
+        justify-content: flex-start;
+        text-align: start;
+      }
+
+      @media screen and (min-width: 62em) {
+        .content-xrs {
+          flex-basis: 50%;
+          max-width: 50%;
+          justify-content: flex-start;
+          text-align: start;
+        }
+      }
+
+      .line-xrs {
+        flex-basis: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin-top: 40px;
+        justify-content: flex-start;
+        text-align: start;
+      }
+
+      @media screen and (min-width: 62em) {
+        .line-xrs {
+          flex-basis: 41.66667%;
+          max-width: 41.66667%;
+          justify-content: center;
+          text-align: center;
+          margin-top: -80px;
+          padding-top: 0;
+          margin-left: 0;
+        }
+      }
     `}
   </style>
 );

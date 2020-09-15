@@ -10,44 +10,11 @@ import {
   colOffset,
 } from "./design/Styles";
 
-export const Container = cxs("div")({
-  display: "flex",
-  flexWrap: "wrap",
-  color: "#333",
-  ...margin.m(2.5),
-  ...content.between,
-  ...line.end,
-  fontFamily: "GT-Pressura-Pro-Mono-Light",
-  "@media screen and (min-width: 62em)": {
-    minHeight: "80vh",
-    ...padding.t(15),
-  },
-});
+export const Container = cxs("div")({});
 
-export const Content = cxs("div")({
-  ...colSize(12),
-  ...content.start,
-  ...padding.p(0),
-  ...margin.t(5),
-  "@media screen and (min-width: 62em)": {
-    ...colSize(6),
-    ...content.start,
-  },
-});
+export const Content = cxs("div")({});
 
-export const LineDrawing = cxs("div")({
-  ...colSize(12),
-  ...content.start,
-  ...colOffset(1),
-  ...padding.t(5),
-  "@media screen and (min-width: 62em)": {
-    ...colSize(5),
-    ...content.center,
-    ...colOffset(0),
-    ...padding.t(0),
-    ...margin.t(-10),
-  },
-});
+export const LineDrawing = cxs("div")({});
 
 export const Directive = cxs("span")({});
 
