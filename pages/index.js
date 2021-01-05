@@ -1,54 +1,24 @@
-import React from "react";
+import Head from '../components/Head'
 
-import Layout from "../components/Layout";
-import {
-  Container,
-  Content,
-  LineDrawing,
-  Directive,
-  Portrait,
-} from "../components/Home";
-import { H1, P, A, Break } from "../components/design";
 
-const Home = () => {
+const headProps = {
+  title:'höme',
+  description: 'This is the personal webspace of David Yeboah, a sofware engineer at Northrop Grumman, previously computer science student at SUNY Oswego.',
+  img: 'Portrait'
+}
+
+
+
+export default function Home() {
   return (
-    <>
-      <Layout
-        title={"david yeboah | scientist"}
-        description={"Welcome to my personal website | daveyeb.com"}
-        image={"/"}
-        page="HOME"
-      >
-        <Container className={"container-xrs"}>
-          <Content className={"content-xrs"}>
-            <H1>David Yeboah</H1>
-            <Break />
-            <P style={{ color: "#555555" }}>
-              SWE currently based in Melbourne ─ building and maintaining
-              software systems that inhabit E-8C JSTARS. Ex-CS student from
-              Oswego State, engineer at Northrop Grumman.
-            </P>
-            <Directive
-              style={{
-                color: "#555555",
-                fontFamily: "GT-Pressura-Pro-Mono-Regular",
-                fontSize: "1em",
-                lineHeight: "1.5rem",
-              }}
-            >
-              Take a look around.
-            </Directive>
-            <Break />
-            <Break />
-            <A href="/about">MORE INFO &#10154;</A>
-          </Content>
-          <LineDrawing className={"line-xrs"}>
-            <Portrait />
-          </LineDrawing>
-        </Container>
-      </Layout>
-    </>
-  );
-};
-
-export default Home;
+      <div>
+        <Head {...headProps}/>
+        <h1>David Yeböah</h1>
+        <p>
+          Software engineer currently based in Melbourne, FL ─ building and maintaining software systems that inhabit E-8C JSTARS. Computer Science graduate from Oswego State, engineer at Northrop Grumman.
+          <br/>
+          Take a look around.
+        </p>
+      </div>
+  )
+}

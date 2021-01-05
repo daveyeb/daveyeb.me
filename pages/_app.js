@@ -1,48 +1,36 @@
-import React, { useEffect, useState } from "react";
-// eslint-disable-next-line node/no-unpublished-import
-import ReactGA from "react-ga";
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
-import MenuStatusContext from "../components/MenuStatusContext";
-import WindowDimensionContext from "../components/WindowDimensionContext";
+const GlobalStyle = createGlobalStyle`
+  body {
+    color: #555555;
+    font-family: lores-9-minus-wide, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+  }
+`
 
-const MyApp = ({ Component, pageProps }) => {
-  const [status, setStatus] = useState(false);
-  const [windowWidth, setWindowWidth] = useState({});
+const theme = {
+  colors: {
+    primary: '#0070f3',
+  },
+}
 
-  useEffect(() => {
-    if (!window.GA_INITIALIZED) {
-      ReactGA.initialize("UA-176178393-1");
-      window.GA_INITIALIZED = true;
-    }
-
-    window.addEventListener("onRouterChange", () => {
-      ReactGA.set({ page: window.location.pathname });
-      ReactGA.pageview(window.location.pathname);
-    });
-
-    function handleWidth() {
-      setWindowWidth({ width: window.innerWidth });
-    }
-
-    window.addEventListener("resize", handleWidth);
-    handleWidth();
-
-    return () => {
-      window.removeEventListener("resize", handleWidth);
-      window.removeEventListener("onRouterChange", () => {
-        ReactGA.set({ page: window.location.pathname });
-        ReactGA.pageview(window.location.pathname);
-      });
-    };
-  }, []);
-
+function MyApp({ Component, pageProps }) {
   return (
-    <WindowDimensionContext.Provider value={[windowWidth, setWindowWidth]}>
-      <MenuStatusContext.Provider value={[status, setStatus]}>
+    <>
+      <GlobalStyle/>
+      <ThemeProvider theme={theme}>
         <Component {...pageProps} />
-      </MenuStatusContext.Provider>
-    </WindowDimensionContext.Provider>
-  );
-};
+      </ThemeProvider>
+    </>
+  )
+  
+  
+}
 
-export default MyApp;
+export default MyApp
