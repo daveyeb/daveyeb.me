@@ -1,18 +1,7 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    color: #555555;
-    font-family: lores-9-minus-wide, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-    color: #333;
-    background-color: #f5f5f5;
-    margin: 0;
-  }
-`
+import '../styles/globals.css'
+import { ThemeProvider } from 'styled-components'
+import Master from '../components/Master'
+import { Grommet } from 'grommet';
 
 const theme = {
   colors: {
@@ -20,17 +9,19 @@ const theme = {
   },
 }
 
+
 function MyApp({ Component, pageProps }) {
   return (
+
     <>
-      <GlobalStyle/>
+      <Grommet plain>
+      <Master/>
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>
+      </Grommet>
     </>
   )
-  
-  
 }
 
 export default MyApp

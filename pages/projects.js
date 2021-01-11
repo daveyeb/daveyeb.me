@@ -1,13 +1,13 @@
 import Head from '../components/Head'
 
 const headProps = {
-    title:'aböut',
-    description: 'This is the personal webspace of David Yeböah, a sofware engineer at Northrop Grumman, previously computer science student at SUNY Oswego.',
+    title:'pröjects',
+    description: 'This is the personal webspace of David Yeboah, a sofware engineer at Northrop Grumman, previously computer science student at SUNY Oswego.',
     img: 'Portrait'
   }
   
 
-export default function About() {
+export default function Projects() {
     return (
         <div>
           <Head {...headProps}/>
@@ -27,9 +27,9 @@ export default function About() {
             </div>
           </div>
   
-          <div class=" row tall">
-            <div class="col-xs-12 col-sm-6 col-sm-offset-2 start-xs red">
-              <h1>Aböut</h1>
+          <div class=" row tall center-xs">
+            <div class=" col-xs-12 col-sm-8 start-xs">
+              <h1>Pröjects</h1>
               <hr></hr>
               <p>
                 Ex ex sit adipisicing minim nisi cupidatat aliqua est sunt. Et duis incididunt laboris sint cillum cillum consequat consequat enim cupidatat laborum laboris cupidatat. Id aliquip non velit minim. Voluptate adipisicing officia est tempor voluptate amet dolore deserunt labore proident esse ipsum cillum nostrud.

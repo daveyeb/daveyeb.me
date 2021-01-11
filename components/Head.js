@@ -1,5 +1,7 @@
 import { default as NextHead } from 'next/head'
 
+
+
 const Head = ({title, description, img}) => {
     return (
     
