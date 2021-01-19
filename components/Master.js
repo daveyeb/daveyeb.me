@@ -8,13 +8,57 @@ const Master = createGlobalStyle`
 }
 
 .float {
-	position: absolute;
+	position: relative;
+	bottom: 35px;
+	left: 10px;
 	z-index: 100;
 }
 
 .pos-middle {
 	left: 50%;
 }
+
+.pos-middle-2 {
+	margin: 0 auto;
+}
+
+.pagination {
+	font-size: 18px;
+}
+
+.p0-important{
+	padding: 0 !important;
+}
+
+.gray {
+	color: #555;
+}
+
+.gray-2 {
+	color: #ccc;
+}
+
+.redc {
+	color: #d0021b;
+}
+
+
+@font-face {
+  font-family: "National2Reg";
+  src: url("/fonts/national-2-test-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "GTPressuraReg";
+  src: url("/fonts/GT-Pressura-Regular-Trial.woff2") format("woff");
+}
+@font-face {
+  font-family: "GTPressuraLig";
+  src: url("/fonts/GT-Pressura-Light-Trial.woff2") format("woff");
+}
+
+
+
+
 
 article,
 aside,
@@ -1285,15 +1329,68 @@ h1 {
 	font-size: 2rem
 }
 
-ul,
-li {
-	list-style: none;
+ul{
+	padding: 0;
+	margin: 0
+
+}
+
+ul,li {
+	display: list-item;
 	padding: 0;
 	margin: 0
 }
 
+ul {
+	list-style: none;
+}
+
 li {
 	margin-bottom: 0.8rem
+}
+
+.listed li::before {
+	width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    left: -8px;
+    top: 14px;
+    content: '';
+    display: block;
+    background: #666;
+    position: relative;
+}
+
+@media (min-width: 48em) {
+	.listed li::before {
+		top: 14px;
+	}
+}
+
+@media (min-width: 62em) {
+	.listed li::before {
+		top: 15px;
+	}
+}
+
+
+
+@media (min-width: 89em) {
+	.listed li::before {
+		top: 16px;
+	}
+}
+
+@media (min-width: 89em) {
+	.listed li::before {
+		top: 16px;
+	}
+}
+
+@media (min-width: 100em) {
+	.listed li::before {
+		top: 19.5px;
+	}
 }
 
 .PrimaryCTA {
@@ -1310,14 +1407,21 @@ li {
 }
 
 .Display1 {
-	font-size: 14vw;
-	line-height: 110%;
-	/* font-family: "GTSectraDisplayLight", Times, Georgia, serif */
+	font-size: 10.375vw;
+	letter-spacing: 28%;
+	line-height: 120%;
+	font-family: "GTPressuraReg", Times, Georgia, serif
+}
+
+@media (min-width: 48em) {
+	.Display1 {
+		font-size: 5.1875vw
+	}
 }
 
 @media (min-width: 62em) {
 	.Display1 {
-		font-size: 5vw
+		font-size: 3.32vw
 	}
 }
 
@@ -1332,9 +1436,10 @@ li {
 }
 
 .Display2 {
-	font-size: 20px;
+	font-size: 17.6px;
+	line-height: 137.5%;
 	line-height: 140%;
-	/* font-family: "GTSectraBook", Arial, sans-serif */
+	font-family: "National2Reg", Arial, sans-serif
 }
 
 @media (min-width: 62em) {
@@ -1396,7 +1501,7 @@ body {
 	overflow-y: auto;
 	overflow-x: hidden;
 	margin: 0;
-	font-family: "lores-12-narrow", Arial, sans-serif;
+	font-family: "National2Reg", Arial, sans-serif;
 	background: #fcfbfa;
 	color: #272320
 }
@@ -2308,6 +2413,10 @@ img {
 	margin-left: 0px;
 	margin-right: 0px;
 	position: relative
+}
+
+.row.short {
+	padding: 0 2vw;
 }
 
 .row.tall {
