@@ -71,9 +71,25 @@ export default function Home() {
           <div class="pb4"></div>
           
           <div class="row p0 end-xs">
-            <span class="col-xs-4 start-xs">© 2020 David Yeböah. All rights reserved.</span>
+            <div class="col-xs-4 start-xs">© 2020 David Yeböah. All rights reserved.
+            
+            
+            <div class="col-xs-7 p0-important">
+             <span class="pt7">about this website</span>
+            <div class="pb2"></div>
+              <span class="abt">
+                Written, designed, and built by myself with Next.js and other react components
+              </span>
+            </div>
+            </div>
             <div class="col-xs-2 ">
-            information
+              <ul>
+                <li>information</li>
+                <li><a>resume</a></li>
+                <li><a>journal</a></li>
+                <li><a>feed</a></li>
+                <li><a>playlists</a></li>
+              </ul>
             </div>
             <div class="col-xs-2">
             
@@ -97,7 +113,7 @@ export default function Home() {
 
             </div>
             <div class="col-xs-2">
-            about me
+          
             </div>
           </div>
         </div>
