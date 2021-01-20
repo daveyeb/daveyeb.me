@@ -42,6 +42,10 @@ const Master = createGlobalStyle`
 	color: #d0021b;
 }
 
+.abt {
+	font-size: 85%;
+}
+
 
 @font-face {
   font-family: "National2Reg";
