@@ -1,78 +1,58 @@
-import React, { useEffect } from "react";
-import { useRouter } from "next/router";
-import Layout from "../components/Layout";
-import { H1, H2, P, A, Break } from "../components/design";
-import { Container, Content } from "../components/About";
+import Head from '../components/Head'
 
-const About = () => {
-  const Router = useRouter();
+const headProps = {
+    title:'aböut',
+    description: 'This is the personal webspace of David Yeböah, a sofware engineer at Northrop Grumman, previously computer science student at SUNY Oswego.',
+    img: 'Portrait'
+  }
+  
 
-  useEffect(() => {
-    if (Router.pathname == "/about") {
-      Router.push("/404");
-    }
-  });
+export default function About() {
+    return (
+        <div>
+          <Head {...headProps}/>
+          <div class="column col-xs-12">
+            <div class="row between-xs ">
+              <div class="">
+                ham
+              </div>
+  
+              <div class="pos-middle">
+                clock
+              </div>
+  
+              <div class="">
+                avatar
+              </div>
+            </div>
+          </div>
+  
+          <div class=" row tall">
+            <div class="col-xs-12 col-sm-6 col-sm-offset-2 start-xs red">
+              <h1>Aböut</h1>
+              <hr></hr>
+              <p>
+                Ex ex sit adipisicing minim nisi cupidatat aliqua est sunt. Et duis incididunt laboris sint cillum cillum consequat consequat enim cupidatat laborum laboris cupidatat. Id aliquip non velit minim. Voluptate adipisicing officia est tempor voluptate amet dolore deserunt labore proident esse ipsum cillum nostrud.
 
-  return (
-    <>
-      <Layout
-        title={"david yeboah | scientist"}
-        description={"My biography | daveyeb.com"}
-        image={"/"}
-        page={About.name.toUpperCase()}
-      >
-        <Container>
-          <Content>
-            {/* <H2>About</H2>
-            <Break />
-            <Break /> */}
-            {/* <P style={{ color: "#555555" }}>
-              {" "}
-              I am, David, an associate software engineer at Northrop Grumman
-              and a recent graduate at Oswego State University in Oswego, NY. I
-              am exceptionally determined as a software engineer, and attempt to
-              compose profoundly meaningful, clean and effective code.
-            </P>
-            <Break />
-            <P style={{ color: "#555555" }}>
-              My passion lies at the intersection of cryptography, artificial
-              intelligence + machine learning, computer vision, data
-              visualization and some ocassional problem solving tools i
-              fabricate in my head. When I’m not creating journey maps and
-              prototypes, I’m building helpful resources or writing about design
-              and development. I’m currently building and maintaining to improve
-              the JSTARS software that inhabits on a E-8C Boeing commerical
-              plane.
-            </P>
-            <Break />
-            <P style={{ color: "#555555" }}>
-              Dont hesitate to connect with me on{" "}
-              <A
-                href="https://www.linkedin.com/in/daveyeb/"
-                style={{ fontFamily: "GT-Pressura-Pro-Mono-Regular" }}
-              >
-                LinkedIn
-              </A>
-              , check out some of my work on{" "}
-              <A
-                href="https://github.com/daveyeb"
-                style={{ fontFamily: "GT-Pressura-Pro-Mono-Regular" }}
-              >
-                Github
-              </A>
-              , give glance at my{" "}
-              <A
-                href="https://github.com/daveyeb/daveyeb.com"
-                style={{ fontFamily: "GT-Pressura-Pro-Mono-Regular" }}
-              >
-                resume.
-              </A>
-            </P> */}
-          </Content>
-        </Container>
-      </Layout>
-    </>
-  );
-};
-
-export default About;
+                Id et esse laborum incididunt dolor nisi. Esse dolore sint elit dolor. Commodo in Lorem in do incididunt pariatur nisi adipisicing sint consequat labore consequat occaecat. Deserunt eu incididunt minim cillum nisi minim est mollit. Quis aute velit ex consectetur magna eiusmod eu. Officia anim mollit eiusmod reprehenderit id dolor fugiat eu ipsum nisi.
+              </p>
+            </div>
+          </div>
+  
+          <div class="row column center-xs">
+            <div class=" col-xs-12 col-sm-8 Divider "></div>
+            <div class="pt3"></div>
+            <div class="row col-xs-12 col-sm-8 ">
+              <span class=" float">© 2020 David Yeböah. All rights reserved.</span>
+              <a class=" end-xs">@daveyeb</a>
+              <hr/>
+              <p class="">
+              Written, designed, and built by David Yeböah, a SWE who you can find on <a>Twitter</a>, <a>GitHub</a>, or good old-fashioned <a>Email</a>.
+              </p>
+            </div>
+          </div>
+          
+        </div>
+    )
+  }
+  
