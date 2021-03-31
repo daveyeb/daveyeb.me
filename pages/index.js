@@ -4,7 +4,7 @@ import {Clock} from 'grommet';
 import { useEffect, useRef, useState } from "react"
 
 const headProps = {
-  title: 'höme',
+  title: 'Casa-- David Yeboah, SWE',
   description:
     'This is the personal webspace of David Yeböah, a sofware engineer at Northrop Grumman, previously computer science student at SUNY Oswego.',
   img: 'Portrait',
@@ -59,7 +59,7 @@ export default function Home() {
             <a
               class="nav-menu top-xs"
               onClick={() => {
-                console.log(open);
+                // console.log(open);
                 
                 
                 setOpen(!open);
@@ -140,16 +140,16 @@ export default function Home() {
               <ul>
                 <li>information</li>
                 <li>
-                  <a>resume</a>
+                  <a href="https://drive.google.com/file/d/1THmCfa2xRc3ZXtHzjeTgFd-JdYuIZ4O1/view" >resume</a>
                 </li>
                 <li>
-                  <a>journal</a>
+                  <a className="not-allowed">journal</a>
                 </li>
                 <li>
-                  <a>feed</a>
+                  {/* <a>feed</a> */}
                 </li>
                 <li>
-                  <a>playlists</a>
+                  <a className="not-allowed">playlists</a>
                 </li>
               </ul>
             </div>
@@ -157,16 +157,16 @@ export default function Home() {
               <ul>
                 <li>contact</li>
                 <li>
-                  <a>email</a>
+                  <a href="mailto:daveyeb@gmail.com">email</a>
                 </li>
                 <li>
-                  <a>phone</a>
+                  <a href="tel:646-420-1283">phone</a>
                 </li>
                 <li>
-                  <a>twitter</a>
+                  <a href="https://twitter.com/daveyeb" target="_blank">twitter</a>
                 </li>
                 <li>
-                  <a>newsletter</a>
+                  {/* <a>newsletter</a> */}
                 </li>
               </ul>
             </div>
@@ -174,10 +174,10 @@ export default function Home() {
               <ul>
                 <li>projects</li>
                 <li>
-                  <a>node-enigma</a>
+                  <a href="https://github.com/daveyeb/node-enigma">enigma</a>
                 </li>
                 <li>
-                  <a>gt6</a>
+                  <a href="https://github.com/daveyeb/repomap">repomap</a>
                 </li>
               </ul>
             </div>

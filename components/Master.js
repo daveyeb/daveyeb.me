@@ -18,6 +18,10 @@ const Master = createGlobalStyle`
 	left: 50%;
 }
 
+.not-allowed {
+	cursor: not-allowed;
+}
+
 .pos-middle-2 {
 	margin: 0 auto;
 }
@@ -64,6 +68,7 @@ const Master = createGlobalStyle`
 
 .nav-menu {
 	overflow-y: hidden;
+	visibility:hidden;
 }
 
 .nav-icon-p {
@@ -139,7 +144,8 @@ audio:not([controls]) {
 
 [hidden],
 template {
-	display: none
+	// display: none
+	visiblity: hidden;
 }
 
 html {

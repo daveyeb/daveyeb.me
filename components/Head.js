@@ -24,7 +24,7 @@ const Head = ({title, description, img}) => {
         <meta content="summary_large_image" name="twitter:card" />
         <meta content={img} name="twitter:image" />
 
-        <link href="/images/favicon.png" rel="shortcut icon" />
+        <link href="/favicon.png" rel="shortcut icon" />
         <link rel="stylesheet" href="https://use.typekit.net/jlh4gie.css"></link>
     </NextHead>
     
