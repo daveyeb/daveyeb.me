@@ -122,7 +122,7 @@ export default function Home() {
 
           <div class="row end-xs">
             <div class="col-sm-4 col-xs-12 start-xs last-xs p0-important first-sm">
-              © 2020 David Yeböah. All rights reserved.
+              © 2021 David Yeböah. All rights reserved.
               <div class="ShowMobile pb2"></div>
               <div class="col-xs-12   col-sm-7 p0-important c-mt99 first-xs last-sm">
                 <span class="c-pt7">about this website</span>
