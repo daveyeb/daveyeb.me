@@ -26,6 +26,7 @@ const Head = ({title, description, img}) => {
 
         <link href="/favicon.png" rel="shortcut icon" />
         <link rel="stylesheet" href="https://use.typekit.net/jlh4gie.css"></link>
+       
     </NextHead>
     
     );
