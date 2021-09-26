@@ -4,7 +4,7 @@ import {Clock} from 'grommet';
 import { useEffect, useRef, useState } from "react"
 
 const headProps = {
-  title: 'Casa-- David Yeboah, SWE',
+  title: 'David Yeboah, SWE',
   description:
     'This is the personal webspace of David Yeböah, a sofware engineer at Northrop Grumman, previously computer science student at SUNY Oswego.',
   img: 'Portrait',
@@ -150,7 +150,7 @@ export default function Home() {
               <ul>
                 <li>information</li>
                 <li>
-                  <a href="https://drive.google.com/file/d/1THmCfa2xRc3ZXtHzjeTgFd-JdYuIZ4O1/view" >resume</a>
+                  <a href="https://drive.google.com/file/d/1QwjEtEQsKdYiw6f5VeGAEuyi4npQjch-/view" >resume</a>
                 </li>
                 <li>
                   <a className="not-allowed">journal</a>
@@ -187,7 +187,7 @@ export default function Home() {
                   <a href="https://github.com/daveyeb/node-enigma">enigma</a>
                 </li>
                 <li>
-                  <a href="https://github.com/daveyeb/repomap">repomap</a>
+                  <a href="https://github.com/daveyeb/rtree">rtree</a>
                 </li>
               </ul>
             </div>
