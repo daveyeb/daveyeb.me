@@ -1,4 +1,6 @@
-export default () => (
+const Footer = () => (
     <>
     </>
 )
+
+export default Footer

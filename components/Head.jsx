@@ -2,7 +2,7 @@ import {
     default as NHead
 } from 'next/head'
 
-export default ({ title, desc }) => (
+const Head = ({ title, desc }) => (
     <NHead>
         <title>
             {title}
@@ -24,3 +24,5 @@ export default ({ title, desc }) => (
 
     </NHead>
 );
+
+export default Head;
