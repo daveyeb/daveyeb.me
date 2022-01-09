@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "evergreen-ui": "^6.6.4",
     "grommet": "^2.19.1",
     "next": "12.0.7",
     "node-fetch": "^2.6.1",

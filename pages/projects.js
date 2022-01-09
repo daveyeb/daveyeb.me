@@ -2,6 +2,8 @@ import Head from '../components/Head'
 import Main from '../components/Main'
 import { GetServerSideProps } from 'next'
 import fetch from "node-fetch";
+import { Pane, Badge, LinkIcon, CodeIcon } from "evergreen-ui";
+import Link from 'next/link';
 
 const headProp = {
   title: 'David Yeböah, Engineer',
@@ -55,46 +57,59 @@ const Projects = (props) => {
       </Head>
       <Main {...navProps}>
         <div className='col-xs-6 center main pt10 '>
-          <h1 className='pb2'>Projects</h1>
-          <span className='desc pb1'>Some outcomes of utilizing my free time to experiment with various languages and technology stacks</span>
-          <div className='Divider op50'></div>
+          <h1 className='pb2 '>Projects</h1>
+          <span className='pb1 p desc p0'>Some outcomes of utilizing my free time to experiment with various languages and technology stacks
+          <div className='Divider descBorder mt1'></div></span>
+
           <div className='meta'>
             <span className='meta mr1'>{props.data.length} projects</span>
             {/* <span className='meta '>All shipped</span> */}
           </div>
           <div className='sep'></div>
-          <div className='sep c-mt '></div>
-          <div className='middle-xs center-xs pt5'>
-            <div className='row p0 op60'>
-              <div className='col-sm-3  start-xs'>Last Updated at</div>
-              {/* <div className='col-sm-9  start-xs'>Project</div> */}
+
+          { props.data.map((project, i ) => {
+           
+
+           return (< >
+            <div className=' pt3  row  p0 ' key={i}>
+            <div className=' col-xs-10   p0'>
+                <h2 className='pt3 '>{project.name}</h2>
+                <p className=' pt2  mt1'>
+                  {project.description}
+                </p>
+                <Pane paddingBottom={16}>
+                  {project.topics.map((topic, i)=> {
+                    <Badge Badge color="red" marginRight={8} key={i}>{topic}</Badge>
+                  })}
+                </Pane>
             </div>
-            <div className=' Divider op30 mt2'>
+            
+            <div className='col-xs-2 center-xs middle-xs'>
+              <Link href={project.homepage}>
+                <LinkIcon paddingBottom={30}></LinkIcon>
+                </Link>
+              <Link href={project.svn_url}>
+                <CodeIcon></CodeIcon>
+                </Link>
             </div>
-            {
-
-              props.data.reverse().map((project, i) =>
-
-                <div className=' row p0'>
-                  <div className=' col-sm-3 start-xs pt4 op50'>
-                    {
-
-                      new Date(project.updated_at).toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' })
-                    }
-                  </div>
-                  <div className=' col-sm-9'>
-                    <div className=' col-xs-8 start-xs p0'><h2 className='pt3'>{project.name} <a>(source)</a></h2></div>
-                    <p className='pt4'>{project.description}</p>
-                  </div>
-                 { (i != props.data.length - 1) ? <div className=' Divider op30 mt2'></div> : ""}
-                </div>
-                
-
-              )
-            }
           </div>
-        </div>
+          <div className='Divider pBorder'></div>
+           </>)
 
+            
+          })}
+
+          
+
+
+          {/* {project.description}
+        {project.name}
+
+        {new Date(project.updated_at).toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' })} */}
+
+          
+
+        </div>
         <style jsx>
           {`
               .center {
@@ -104,6 +119,13 @@ const Projects = (props) => {
 
               .column .center {
                 text-align: center;
+              }
+
+              .pl3 {
+                padding-left: 45px !important;
+                border-bottom: 1px solid #292929 !important;
+                border-right: 1px solid #292929 !important;
+                font-size: 10px;
               }
 
               .main {
@@ -121,9 +143,27 @@ const Projects = (props) => {
                 font-size: 13px;
               }
 
+              .project {
+                // border-left: 1px solid !important;
+              }
+
+              .lupdate {
+                font-family: 'srrqzbab' !important;
+                font-size: 10px;
+              }
+
               .desc {
                 width: 45%;
+              }
+
+              .descBorder {
+                border-radius: 50% / 50%;
                 border-bottom: 8px solid rgb(23,143,131);
+              }
+
+              .pBorder {
+                border-bottom: 1px solid #e2e2e2;
+                margin: 1em auto;
               }
 
               .c-mt {
@@ -142,6 +182,14 @@ const Projects = (props) => {
 
               .altfont {
                 font-family: 'srrqzbab'
+              }
+
+              .p {
+                font-size: 1.05rem !important;
+              }
+
+              h1 {
+                font-size: 2.25rem !important;
               }
 
 
