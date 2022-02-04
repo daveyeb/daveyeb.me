@@ -1,0 +1,28 @@
+@supports not (caret-color: auto) {
+    .govuk-fieldset, x:-moz-any-link {
+        display: table-cell
+    }
+}
+
+pre {
+    max-width: 38em;
+    margin: 0;
+    padding: 20px;
+    overflow: auto;
+    border: 1px solid #b1b4b6;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    margin-bottom: 15px
+}
+
+@media (min-width: 40.0625em) {
+    pre {
+        margin-bottom: 20px
+    }
+}
+
+li code, td code, p code {
+    padding: 0 5px;
+    color: #d13118;
+    background-color: #f3f2f1
+}
