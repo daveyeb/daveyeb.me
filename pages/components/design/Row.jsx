@@ -1,17 +1,13 @@
 import styles from '../../../public/govuk/main.module.css'
 import Container from './Container'
 
-const rows = {
-    default: styles['govuk-grid-row']
-}
-
-const GridRow = ({children, debug}) => {
+const Row = ({children, debug}) => {
     debug = debug ? styles.debug : ''
     return (
 
         <>
             <Container>
-                <div className={`${rows['default']} ${debug}`}>
+                <div className={`${styles['govuk-grid-row']} ${debug}`}>
                     {children}
                 </div>
             </Container>
@@ -19,4 +15,4 @@ const GridRow = ({children, debug}) => {
     )
 }
 
-export default GridRow
+export default Row

@@ -1,5 +1,4 @@
 import styles from '../../../public/govuk/main.module.css'
-import { marginBottom, paddingBottom } from './Spacing'
 
 const types = {
     novisitedstate: styles['govuk-link--no-visited-state'],
@@ -15,12 +14,7 @@ const Link = ({children, style}) => {
                 {`
                     * {
                         font-family: 'BDR Mono' !important;
-                        // text-transform: uppercase;
                         font-size: 14px;
-                        // font-weight: 500;
-                        // line-height: 22px;
-                        // white-space: pre;
-                        // word-break: normal;
                         color: #292929 !important;
                     }
                 `}

@@ -1,11 +1,7 @@
-import {Link as NextLink} from 'next/link'
+import { Link as NextLink } from "next/link";
 
 const Link = () => {
-    return (
-        <NextLink>
+  return <NextLink></NextLink>;
+};
 
-        </NextLink>
-    )
-}
-
-export default Link
+export default Link;

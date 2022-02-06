@@ -1,42 +1,66 @@
-import GridCols from "./design/GridCols"
-import Link from "./design/Link"
-import { width, paddingBottom, marginBottom} from './design/Spacing'
+import Col from "./design/Col";
+import Link from "./design/Link";
+import ss from "./utils/ss";
+
+var Pages = ({ children, className }) => {
+  console.log(className);
+  return (
+    <>
+      <div className={className}>{children}</div>
+      <style jsx>
+        {`
+          .bottom {
+            position: absolute;
+            bottom: 0;
+          }
+
+          .debug {
+            border: 1px solid red !important;
+          }
+        `}
+      </style>
+    </>
+  );
+};
+
+Pages = ss(Pages);
 
 const Nav = () => {
-    return (
-        <>
-            <div className=" nav">
-                <GridCols size={'full'} marTop="1"><Link>home</Link></GridCols>
-                <div className="bottom">
-                    <GridCols size={'full'} marBottom="1"><Link>projects</Link></GridCols>
-                    <GridCols size={'full'} marBottom="1" ><Link>blog</Link></GridCols>
-                    
-                    <GridCols size={'full'} marBottom="1" ><Link>playlists</Link></GridCols>
-                </div>
-            </div>
-            
-            <style jsx>
-            {
-                `
-                    .nav {
-                        height: 100vh;
-                        width: 10vw;
-                        position: absolute;
-                    }
+  return (
+    <>
+      <div className="nav ">
+        <Col size={"full"} mt={1}>
+          <Link>home</Link>
+        </Col>
+        <Pages className="bottom " mb={1}>
+          <Col size={"full"} mb={1}>
+            <Link>projects</Link>
+          </Col>
+          <Col size={"full"} mb={1}>
+            <Link>blog</Link>
+          </Col>
 
-                    .bottom {
-                        position: absolute;
-                        bottom: 0;
-                    }
+          <Col size={"full"} mb={1}>
+            <Link>playlists</Link>
+          </Col>
+        </Pages>
+      </div>
 
-                    .debug {
-                        border: 1px solid red !important;
-                    }
-                `
-            }
-            </style>
-        </>
-    )
-}
+      <style jsx>
+        {`
+          .nav {
+            height: 100vh;
+            width: 10vw;
+            position: absolute;
+          }
 
-export default Nav
+          .debug {
+            border: 1px solid red !important;
+          }
+        `}
+      </style>
+    </>
+  );
+};
+
+export default Nav;
