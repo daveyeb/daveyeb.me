@@ -42,7 +42,7 @@ export default function Projects({ repos }) {
             <Layout creator={meta.creator} title={title} pages={pages} mt={3}>
 
                 <div className={`${styles['row']} __pt __100vh`}>
-                    <div className={`${styles['col-md-5']} __pt ${styles['flow']} __center `}>
+                    <div className={`${styles['col-md-7']} ${styles['col-lg-5']} __pt ${styles['flow']} __center `}>
                         <div className="">
                             <h1>
                                 Projects
@@ -93,6 +93,12 @@ export default function Projects({ repos }) {
                     font-weight: normal !important;
                 }
 
+                @media only screen and (max-width: 48em) {
+                    .image {
+             
+                    }
+                }
+
                 .__pt {
                     margin-top: 2em ; 
                   }
@@ -128,7 +134,7 @@ export default function Projects({ repos }) {
                 }
 
                 .__width60 {
-                    max-width: 80%;
+                    max-width: 100%;
                 }
 
                 h1 {

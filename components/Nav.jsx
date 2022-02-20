@@ -9,7 +9,7 @@ const Nav = ({ active, pages }) => {
 
   return (
     <>
-      <div className={`nav `}>
+      <div className={`nav`}>
         <div className={`active  ___mobile ${styles["m1"]}`}>
           <A className={``}>{active}</A>
         </div>
@@ -41,11 +41,11 @@ const Nav = ({ active, pages }) => {
           }
 
           .nav {
-            height: 100vh;
+            position: fixed;
+            height: 100vh !important;
             width: 10vw;
             margin: 0;
             padding: 0;
-            position: absolute;
             z-index: 100;
           }
 
@@ -53,7 +53,7 @@ const Nav = ({ active, pages }) => {
           }
 
           .pages {
-            position: absolute;
+            position: fixed;
             bottom: 0;
           }
 

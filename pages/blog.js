@@ -14,7 +14,7 @@ export default function Blog() {
     <>
       <Layout creator={meta.creator} title={title} pages={pages} mt={3}>
         <div className={`${styles['row']} __pt  __100vh`}>
-          <div className={`${styles['col-md-5']} ${styles['flow']} __pt __center `}>
+          <div className={`${styles['col-md-7']} ${styles['col-lg-5']} ${styles['flow']} __pt __center `}>
             <h1>
               Blog
             </h1>

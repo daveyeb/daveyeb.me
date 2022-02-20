@@ -18,7 +18,7 @@ var Salut = ({ className }) => {
           <li className="">
             <sup>
               <sup>
-                <sup>1</sup>
+                <sup className="___mobile">1</sup>
               </sup>
             </sup>
             Software Engineer currently based in Raleigh
@@ -26,7 +26,7 @@ var Salut = ({ className }) => {
           <li>
             <sup>
               <sup>
-                <sup className={``}>2</sup>
+                <sup className="___mobile">2</sup>
               </sup>
             </sup>
             Providing support and tooling to internal brokers to deal with
@@ -35,7 +35,7 @@ var Salut = ({ className }) => {
           <li>
             <sup>
               <sup>
-                <sup>3</sup>
+                <sup className="___mobile">3</sup>
               </sup>
             </sup>
             Computer Science graduate from Oswego State
@@ -43,7 +43,7 @@ var Salut = ({ className }) => {
           <li>
             <sup>
               <sup>
-                <sup>4</sup>
+                <sup className="___mobile">4</sup>
               </sup>
             </sup>
             Engineer at Deutsche Bank
@@ -104,13 +104,38 @@ const Intro = () => {
         }
 
         .image {
-
           position: absolute;
           z-index: -1;
           top: 50%;
           -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+        }
+
+        @media only screen and (min-width: 72em) {
+          .image {
+            top: 25%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+          }
+
+          .intro {
+            // padding-top: 5px !important;
+          }
+        }
+
+        @media only screen and (min-width: 92em) {
+          .image {
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+          }
+
+          .intro {
+            // padding-top: 5px !important;
+          }
         }
 
         @media only screen and (min-width: 48em) {
@@ -147,7 +172,7 @@ const Intro = () => {
 
         sup {
           position: absolute;
-          left: %;
+          // left: %;
           color: tomato;
           font-size: var(--fs-300);
           // font-family: "Varela Round", sans-serif;
