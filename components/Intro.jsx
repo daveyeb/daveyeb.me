@@ -112,6 +112,20 @@ const Intro = () => {
           transform: translateY(-50%);
         }
 
+        @media only screen and (min-width: 60em) {
+          .image {
+            top: 20%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+          }
+
+          .intro {
+            // padding-top: 5px !important;
+          }
+        }
+
+
         @media only screen and (min-width: 72em) {
           .image {
             top: 25%;
@@ -125,7 +139,7 @@ const Intro = () => {
           }
         }
 
-        @media only screen and (min-width: 92em) {
+        @media only screen and (min-width: 110em) {
           .image {
             top: 50%;
             -webkit-transform: translateY(-50%);
