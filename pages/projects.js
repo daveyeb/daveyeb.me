@@ -1,58 +1,168 @@
-import Head from '../components/Head'
+import styles from "../public/styles/design.module.css";
+import gov from "../public/styles/main.module.css";
+import Intro from "../components/Intro";
+import Layout from "../components/Layout";
+import meta from "../utils/meta";
+import Link from 'next/link'
 
-const headProps = {
-    title:'pröjects',
-    description: 'This is the personal webspace of David Yeboah, a sofware engineer at Northrop Grumman, previously computer science student at SUNY Oswego.',
-    img: 'Portrait'
-  }
-  
+const pages = meta.pages
+const title = `${pages.projects.title}`;
+const dg = styles.dg;
 
-export default function Projects() {
+export async function getStaticProps() {
+    const user = process.env.USER
+    const token = process.env.TOKEN
+
+    const creds = `${user}:${token}`;
+
+    const options = {
+        mode: 'cors',
+        headers: {
+            'Authorization' : 'Basic ' + creds
+        }
+    }
+    const res = await fetch("https://api.github.com/users/daveyeb/repos", options);
+    const repos = await res.json();
+    return {
+        props: {
+            repos,
+        }
+    };
+}
+
+function openInNewTab(url) {
+    window.open(url, '_blank').focus();
+}
+
+
+export default function Projects({ repos }) {
+
     return (
-        <div>
-          <Head {...headProps}/>
-          <div class="column col-xs-12">
-            <div class="row between-xs ">
-              <div class="">
-                ham
-              </div>
-  
-              <div class="pos-middle">
-                clock
-              </div>
-  
-              <div class="">
-                avatar
-              </div>
-            </div>
-          </div>
-  
-          <div class=" row tall center-xs">
-            <div class=" col-xs-12 col-sm-8 start-xs">
-              <h1>Pröjects</h1>
-              <hr></hr>
-              <p>
-                Ex ex sit adipisicing minim nisi cupidatat aliqua est sunt. Et duis incididunt laboris sint cillum cillum consequat consequat enim cupidatat laborum laboris cupidatat. Id aliquip non velit minim. Voluptate adipisicing officia est tempor voluptate amet dolore deserunt labore proident esse ipsum cillum nostrud.
+        <>
+            <Layout creator={meta.creator} title={title} pages={pages} mt={3}>
 
-                Id et esse laborum incididunt dolor nisi. Esse dolore sint elit dolor. Commodo in Lorem in do incididunt pariatur nisi adipisicing sint consequat labore consequat occaecat. Deserunt eu incididunt minim cillum nisi minim est mollit. Quis aute velit ex consectetur magna eiusmod eu. Officia anim mollit eiusmod reprehenderit id dolor fugiat eu ipsum nisi.
-              </p>
-            </div>
-          </div>
-  
-          <div class="row column center-xs">
-            <div class=" col-xs-12 col-sm-8 Divider "></div>
-            <div class="pt3"></div>
-            <div class="row col-xs-12 col-sm-8 ">
-              <span class=" float">© 2020 David Yeböah. All rights reserved.</span>
-              <a class=" end-xs">@daveyeb</a>
-              <hr/>
-              <p class="">
-              Written, designed, and built by David Yeböah, a SWE who you can find on <a>Twitter</a>, <a>GitHub</a>, or good old-fashioned <a>Email</a>.
-              </p>
-            </div>
-          </div>
-          
-        </div>
-    )
-  }
-  
+                <div className={`${styles['row']} __pt __100vh`}>
+                    <div className={`${styles['col-md-5']} __pt ${styles['flow']} __center `}>
+                        <div className="">
+                            <h1>
+                                Projects
+                            </h1>
+                        </div>
+
+                        <div className={`${gov['govuk-inset-text']} __inset`}>
+                            Outcomes of utilizing free time and experimenting with various languages and technology stacks
+                        </div>
+
+
+                        <div className={`${styles['flow']} ${styles['col-offset-']}`}>
+                            {
+
+                                repos.map((repo, i) => {
+                                    return   (
+                                        <>
+
+                                            <div className={`${styles['flow']} __container __width60`} key={i}>
+                                                <h2 >{repo.name}</h2>
+                                                <strong  className={`${gov['govuk-tag']} strong ${gov['govuk-phase-banner__content__tag']}`}>
+                                                    { repo.topics[0] }
+                                                </strong>
+                                                <p className={`__container`}>
+                                                    {repo.description}
+                                                </p>
+                                                <div>
+                                                    <a href={repo.html_url}  target="_blank" className={`${gov['app-copy-button']} ${gov["govuk-link--no-visited-state"]}`} aria-live="assertive">Source code</a>
+                                                </div>
+                                            </div>
+
+                                        </>
+                                    ) 
+                                })
+                            }
+                        </div>
+
+                    </div>
+                </div>
+
+                <style jsx>
+                    {`
+            
+                
+                .strong {
+                    // font-family: "BDR Mono" !important;
+                    font-size: var(--fs-200);
+                    font-weight: normal !important;
+                }
+
+                .__pt {
+                    margin-top: 2em ; 
+                  }
+
+                  @media only screen and (min-width: 48em) {
+                    .__pt {
+                      margin-top: 0;
+                    }
+                  }
+
+                .__100vh {
+                    height: 100vh;
+                }
+
+                .__center {
+                    margin: 0 auto;
+                }
+
+                a {
+                    color: #292929 !important;
+                }
+
+                .p0 {
+                    padding: 0px !important;
+                    border-bottom: 1px solid #000 !important; 
+                }
+
+                .__container{
+                    padding: 20px;
+                    border: 1px solid #b1b4b6;
+                    background-color: #fff;
+                    
+                }
+
+                .__width60 {
+                    max-width: 80%;
+                }
+
+                h1 {
+                    font-family: "Varela Round", sans-serif;
+                    font-size: var(--fs-700);
+                    font-weight: 400;
+                }
+
+                .__inset {
+                    max-width: 60%;
+                }
+
+                @media only screen and (max-width: 48em) {
+                    .__inset {
+                        max-width: 100%;
+                    }
+
+                    .__width60 {
+                        max-width: 100%;
+                    }
+                  }
+
+                h2 {
+                    font-family: "Varela Round", sans-serif;
+                    font-size: var(--fs-500);
+                    font-weight: 400;
+                }
+
+                
+                `}
+                </style>
+
+
+            </Layout>
+        </>
+    );
+}

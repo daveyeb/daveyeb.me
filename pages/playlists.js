@@ -1,33 +1,30 @@
 import styles from "../public/styles/design.module.css";
 import Layout from "../components/Layout";
-import meta from "../utils/meta";
 import gov from "../public/styles/main.module.css";
+import meta from "../utils/meta";
 
 
 const pages = meta.pages
-const title = `${pages.blog.title}`;
+const title = `${pages.playlists.title}`;
 const dg = styles.dg;
 
 
-export default function Blog() {
+export default function Playlists() {
   return (
     <>
-      <Layout creator={meta.creator} title={title} pages={pages} mt={3}>
-        <div className={`${styles['row']} __pt  __100vh`}>
-          <div className={`${styles['col-md-5']} ${styles['flow']} __pt __center `}>
+    <Layout creator={meta.creator} title={title} pages={pages} mt={3}>
+    <div className={`${styles['row']}  __pt __100vh`}>
+          <div className={`${styles['col-md-5']} ${styles['flow']} __center `}>
             <h1>
-              Blog
+              Playlists
             </h1>
 
             <div className={`${gov['govuk-inset-text']} __inset`}>
-              Writings about personal interests and tutorials
+              Some tunes for the ones that enjoy music
             </div>
-
-            <div className={`${styles['center-xs']} ${styles['pt10']} ${styles['mt10']}`}>
-
-            <iframe src="https://giphy.com/embed/Wn0Lj9phmxne7atJsM" width="200" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/sunday-tinymckittens-sundyfunday-Wn0Lj9phmxne7atJsM">via GIPHY</a></p>
-            </div>
-
+            
+            
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1EpezFalzCZ2Rl?utm_source=generator&theme=0" width="100%" height="600" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
           </div>
         </div>
@@ -35,17 +32,17 @@ export default function Blog() {
         <style jsx>
           {`
             
-
-            .__pt {
-              margin-top: 2em ; 
-            }
-
-            @media only screen and (min-width: 48em) {
               .__pt {
-                margin-top: 0;
+                margin-top: 2em; 
               }
-            }
-            
+
+              
+
+              @media only screen and (min-width: 48em) {
+                .__pt {
+                  margin-top: 0;
+                }
+              }
                 
                 .strong {
                     // font-family: "BDR Mono" !important;
@@ -65,6 +62,11 @@ export default function Blog() {
                     color: #292929 !important;
                 }
 
+                // button {
+                //     height: 50vh !important; 
+                //     width: 50vh !important; 
+                // }
+
                 .__container{
                     padding: 20px;
                     border: 1px solid #b1b4b6;
@@ -75,6 +77,10 @@ export default function Blog() {
                 .__width60 {
                     max-width: 80%;
                 }
+
+                // iframe {
+                //   border-radius:12px
+                // }
 
                 h1 {
                     font-family: "Varela Round", sans-serif;
@@ -101,7 +107,7 @@ export default function Blog() {
                 
                 `}
         </style>
-      </Layout>
-    </>
+    </Layout>
+  </>
   );
 }

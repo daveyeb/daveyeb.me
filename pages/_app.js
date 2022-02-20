@@ -1,25 +1,17 @@
-import '../styles/globals.css'
-import { ThemeProvider } from 'styled-components'
-import Master from '../components/Master'
-import { Grommet } from 'grommet';
+import '../public/styles/globals.css'
+import '../public/styles/main.css'
+import '../public/styles/main.module.css'
 
-const theme = {
-  colors: {
-    primary: '#0070f3',
-  },
-}
-
+import { ThemeProvider } from "styled-components";
+import theme from '../utils/theme'
 
 function MyApp({ Component, pageProps }) {
-  return (
 
+  return (
     <>
-      <Grommet plain>
-      <Master/>
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>
-      </Grommet>
     </>
   )
 }
