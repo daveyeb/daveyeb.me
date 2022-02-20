@@ -25,7 +25,7 @@ export default function Blog() {
 
             <div className={`${styles['center-xs']} ${styles['pt10']} ${styles['mt10']}`}>
 
-            <iframe src="https://giphy.com/embed/Wn0Lj9phmxne7atJsM" width="200" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/sunday-tinymckittens-sundyfunday-Wn0Lj9phmxne7atJsM">via GIPHY</a></p>
+            <iframe src="https://giphy.com/embed/Wn0Lj9phmxne7atJsM" width="200" height="200" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/sunday-tinymckittens-sundyfunday-Wn0Lj9phmxne7atJsM">via GIPHY</a></p>
             </div>
 
 

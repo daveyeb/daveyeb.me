@@ -13,7 +13,7 @@ var Salut = ({ className }) => {
       <div
         className={`${className} ${styles["flow"]} intro wrapper  ${styles["col-md-8"]} ${styles["col-md-offset-1"]} ${styles["start-xs"]} `}
       >
-        <h1 className={`salut  ${styles["pt3"]} `}>Hola I'm David</h1>
+        <h1 className={`salut  ${styles["pt3"]}`}>Hola I&apos;m David</h1>
         <ul className={`bckgrnd ${styles["flow"]} ${styles["pb5"]}`}>
           <li className="">
             <sup>

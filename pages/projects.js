@@ -70,7 +70,7 @@ export default function Projects({ repos }) {
                                                     {repo.description}
                                                 </p>
                                                 <div>
-                                                    <a href={repo.html_url}  target="_blank" className={`${gov['app-copy-button']} ${gov["govuk-link--no-visited-state"]}`} aria-live="assertive">Source code</a>
+                                                    <a href={repo.html_url}  target="_blank" rel="noreferrer" className={`${gov['app-copy-button']} ${gov["govuk-link--no-visited-state"]}`} aria-live="assertive">Source code</a>
                                                 </div>
                                             </div>
 
