@@ -2,7 +2,7 @@ import styles from "../public/styles/design.module.css";
 import Layout from "../components/Layout";
 import gov from "../public/styles/main.module.css";
 import meta from "../utils/meta";
-import {useEffect} from 'react'
+import { useEffect, useState} from 'react'
 
 
 const pages = meta.pages
@@ -11,21 +11,23 @@ const dg = styles.dg;
 
 
 export default function Playlists() {
+  useEffect(() => {
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  useEffect(()=>{
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-176178393-1', 'auto');
+    ga('send', 'pageview');
 
-      ga('create', 'UA-176178393-1', 'auto');
-      ga('send', 'pageview');
-  },[])
+  }, [])
 
   return (
     <>
-    <Layout creator={meta.creator} title={title} pages={pages} mt={3}>
-    <div className={`${styles['row']}  __pt __100vh`}>
+      <Layout creator={meta.creator} title={title} pages={pages} mt={3}>
+        <div className={`__pt  ${styles['___mobilePages']} ${styles['row']} __100vh`}>
           <div className={`${styles['col-md-7']} ${styles['col-lg-5']} ${styles['flow']} __center `}>
             <h1>
               Playlists
@@ -34,8 +36,8 @@ export default function Playlists() {
             <div className={`${gov['govuk-inset-text']} __inset`}>
               Some tunes for the ones that enjoy music
             </div>
-            
-            
+
+
             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1EpezFalzCZ2Rl?utm_source=generator&theme=0" width="100%" height="600" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
           </div>
@@ -48,7 +50,10 @@ export default function Playlists() {
                 margin-top: 2em; 
               }
 
-              
+              .__lr {
+                  padding-right: 7vw;
+                  padding-left: 7vw;
+              }
 
               @media only screen and (min-width: 48em) {
                 .__pt {
@@ -119,7 +124,7 @@ export default function Playlists() {
                 
                 `}
         </style>
-    </Layout>
-  </>
+      </Layout>
+    </>
   );
 }

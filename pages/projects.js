@@ -1,9 +1,7 @@
 import styles from "../public/styles/design.module.css";
 import gov from "../public/styles/main.module.css";
-import Intro from "../components/Intro";
 import Layout from "../components/Layout";
 import meta from "../utils/meta";
-import Link from 'next/link'
 import {useEffect} from 'react'
 
 const pages = meta.pages
@@ -31,11 +29,6 @@ export async function getStaticProps() {
     };
 }
 
-function openInNewTab(url) {
-    window.open(url, '_blank').focus();
-}
-
-
 export default function Projects({ repos }) {
 
     useEffect(()=>{
@@ -53,13 +46,12 @@ export default function Projects({ repos }) {
         <>
             <Layout creator={meta.creator} title={title} pages={pages} mt={3}>
 
-                <div className={`${styles['row']} __pt __100vh`}>
+                <div className={`${styles['row']} ${styles['___mobilePages']} __pt __100vh`}>
                     <div className={`${styles['col-md-7']} ${styles['col-lg-5']} __pt ${styles['flow']} __center `}>
-                        <div className="">
+
                             <h1>
                                 Projects
                             </h1>
-                        </div>
 
                         <div className={`${gov['govuk-inset-text']} __inset`}>
                             Outcomes of utilizing free time and experimenting with various languages and technology stacks
@@ -146,7 +138,7 @@ export default function Projects({ repos }) {
                 }
 
                 .__width60 {
-                    max-width: 100%;
+                    max-width: 80%;
                 }
 
                 h1 {
