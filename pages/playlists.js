@@ -38,8 +38,7 @@ export default function Playlists() {
             </div>
 
 
-            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1EpezFalzCZ2Rl?utm_source=generator&theme=0" width="100%" height="600" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-
+            <iframe src="https://open.spotify.com/embed/playlist/3jTWHU9BBeCSBiXdcS5UjT?utm_source=generator&theme=0" width="100%" height="600" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
           </div>
         </div>
 
