@@ -1,14 +1,14 @@
 .container {
-  display: flex;
+  /* display: flex; */
   /* justify-items: ; */
-  flex-direction: row;
-  padding: 0 2rem;
+  /* flex-direction: row;
+  padding: 0 2rem; */
 }
 
 .block {
-  flex: none;
+  /* flex: none;
   margin: 8px 4px;
-  padding: 4px;
+  padding: 4px; */
   border: 1px solid #40a9ff;
 }
 

@@ -14,3 +14,40 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+@font-face {
+  font-family: BDRmono2021;
+  src: url('/bdr_mono_2021/bdr_mono_2021/BDRmono2021-Bold.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: BDRmono2021;
+  src: url('/bdr_mono_2021/bdr_mono_2021/BDRmono2021-Light.otf');
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: BDRmono2021;
+  src: url('/bdr_mono_2021/bdr_mono_2021/BDRmono2021-Light.otf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: BDRmono2021Rounded;
+  src: url('/bdr_mono_2021/bdr_mono_2021/BDRmono2021Rounded-Bold.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: BDRmono2021Rounded;
+  src: url('/bdr_mono_2021/bdr_mono_2021/BDRmono2021Rounded-Light.otf');
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: BDRmono2021Rounded;
+  src: url('/bdr_mono_2021/bdr_mono_2021/BDRmono2021Rounded-Light.otf');
+  font-weight: normal;
+}

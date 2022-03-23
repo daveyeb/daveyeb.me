@@ -1,22 +1,23 @@
 import styles from '../styles/Home.module.css'
 import { Space } from 'antd'
 import 'antd/dist/antd.css'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Stack } from 'react-bootstrap'
 
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.block}>
-        <Space align='baseline' direction='vertical' size='large'>
+        <Stack direction='horizontal' className='p-5 align-items-start' gap={5}>
            Ghana
-          <span>
+          <span className='display-1'>
             Fish tacos
           </span>
           <span className={styles.banana}>
             Banana pudding
           </span>
-        </Space>
+        </Stack>
       </div>
       <div className={styles.block}>
         <Space align='end'>
@@ -31,6 +32,15 @@ export default function Home() {
           </div>
         </Space>
       </div>
+      <style jsx>
+      {`
+       * {
+         font-family:'BDRmono2021Rounded';
+       }
+      `
+      }
+    </style>
     </div>
+   
   )
 }
