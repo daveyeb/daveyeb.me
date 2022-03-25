@@ -16,6 +16,60 @@ a {
 }
 
 
+.red {
+  border: 1px solid red !important;
+}
+
+.nav {
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  font-family: BDRmono2021;
+}
+
+.nav-items {
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+}
+
+.rel {
+  position: relative
+}
+
+.pos1 {
+  top: -5em;
+}
+
+.pos2 {
+  top: -3em;
+}
+
+.pos3 {
+  top: -1em;
+}
+
+.rel a {
+  position: absolute;
+  display: block;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+a:focus {
+  animation: up 0.5s forwards;
+}
+
+@keyframes up {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes down {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+
 @font-face {
   font-family: BDRmono2021;
   src: url('/bdr_mono_2021/bdr_mono_2021/BDRmono2021-Bold.otf');
