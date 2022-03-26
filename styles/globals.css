@@ -56,8 +56,12 @@ a {
   color: inherit !important;
 }
 
-a:focus {
+.prev {
   animation: up 0.5s forwards;
+}
+
+.next {
+  animation: down 0.5s forwards;
 }
 
 @keyframes up {
