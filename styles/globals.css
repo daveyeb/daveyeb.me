@@ -15,7 +15,6 @@ a {
   box-sizing: border-box;
 }
 
-
 .red {
   border: 1px solid red !important;
 }
@@ -27,14 +26,8 @@ a {
   font-family: BDRmono2021;
 }
 
-.nav-items {
-  height: 10vh;
-  position: fixed;
-  bottom: 0;
-}
-
 .rel {
-  position: relative
+  position: relative;
 }
 
 .pos1 {
@@ -49,21 +42,6 @@ a {
   top: -1em;
 }
 
-.rel a {
-  position: absolute;
-  display: block;
-  text-decoration: none !important;
-  color: inherit !important;
-}
-
-.prev {
-  animation: up 0.5s forwards;
-}
-
-.next {
-  animation: down 0.5s forwards;
-}
-
 @keyframes up {
   0% { transform: translateY(100%); }
   100% { transform: translateY(0); }
@@ -72,6 +50,16 @@ a {
 @keyframes down {
   0% { transform: translateY(-100%); }
   100% { transform: translateY(0); }
+}
+
+@keyframes p___up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
+@keyframes p___down {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100%); }
 }
 
 @font-face {
