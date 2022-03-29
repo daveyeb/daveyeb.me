@@ -11,7 +11,7 @@ const Nav = () => {
     <>
       <div className="col-sm-1 nav p-3">
         <span>home</span>
-        <div className="d-flex justify-content-end nav-items ">
+        <div className="d-flsex justify-content-end navitems ">
             <NavLink></NavLink>
         </div>
       </div>

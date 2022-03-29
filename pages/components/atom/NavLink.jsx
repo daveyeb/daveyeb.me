@@ -1,47 +1,52 @@
 import { useState } from "react";
 
-
-
 const NavLink = () => {
   var [clicked, setClicked] = useState(false);
-  var [ended, setEnded] = useState(false);
+  var [links, updateArr] = useState(["blog", "projects"]);
 
-  var prev = 'blog'
-  var next = 'projects'
-  
-  const switchLinks = () => {
-    let temp = prev; 
-    prev = next; 
-    next = temp;      
-  }
 
+  var curr = 0;
   return (
     <>
-      <div className="nav-item display-1 rel overflow-hidden">
+      <div className="nav-item d-flex row display1 rel re/d overflow-hidden">
         <a
-          className=
-          {`
-            ${clicked ? "pprev position-absolute " : ""} 
-            ${ended ? "" : ""}`
-          }
-          onClick={() => setClicked(true)}
+          className={`${clicked ? "pprev position-absolute re/d" : ""} `}
+          onClick={() => {
+            setClicked(true);
+          }}
           onAnimationEnd={() => {
-            setEnded(true)
-            setClicked(false)
-            switchLinks()
+            updateArr(links.concat(links.splice(0, 1)));
+            console.log(links);
+            setClicked(false);
           }}
         >
-          {prev}
+          {links[0]}
         </a>
-        <a className={`${clicked ? "nprev " : ""}`}>{next}</a>
+        <a className={`${clicked ? "nprev " : "d-none"}`}>{links[1]}</a>
+      </div>
+      <div className="nav-item d-flex row display1 rel re/d overflow-hidden">
+        <a
+          className={`${clicked ? "pprev position-absolute re/d" : ""} `}
+          onClick={() => {
+            setClicked(true);
+          }}
+          onAnimationEnd={() => {
+            updateArr(links.concat(links.splice(0, 1)));
+            console.log(links);
+            setClicked(false);
+          }}
+        >
+          {links[0]}
+        </a>
+        <a className={`${clicked ? "nprev " : "d-none"}`}>{links[1]}</a>
       </div>
       <style jsx>
         {`
           a {
             display: block;
-            margin-bottom: -19px;
+            // margin-bottom: -15px;
             line-height: 1;
-            overflow: hidden;
+            // overflow: hidden;
             padding: 0;
             text-decoration: none !important;
             color: inherit !important;
@@ -64,7 +69,8 @@ const NavLink = () => {
           }
 
           .nav-item {
-            height: 61px;
+            // height: 61px;
+            // display:flex;
           }
         `}
       </style>
