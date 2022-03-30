@@ -1,52 +1,72 @@
 import { useState } from "react";
 
-const NavLink = () => {
+const NavLink = ({pages}) => {
   var [clicked, setClicked] = useState(false);
-  var [links, updateArr] = useState(["blog", "projects"]);
+  var [links, updateLinks] = useState(pages);
+  var pos = 0;
 
+// .  01     12         2
+//  [blog, projects, playlists]
 
-  var curr = 0;
+  
+
   return (
     <>
-      <div className="nav-item d-flex row display1 rel re/d overflow-hidden">
+      <div className="nav-item d-flex red rel row overflow-hidden">
         <a
-          className={`${clicked ? "pprev position-absolute re/d" : ""} `}
+          className={`${clicked ? "pprev position-absolute" : ""}`}
           onClick={() => {
             setClicked(true);
           }}
           onAnimationEnd={() => {
-            updateArr(links.concat(links.splice(0, 1)));
+            updateLinks(links.concat(links.splice(0, 1)));
             console.log(links);
             setClicked(false);
           }}
         >
-          {links[0]}
+          {links[pos]}
         </a>
-        <a className={`${clicked ? "nprev " : "d-none"}`}>{links[1]}</a>
+        <a className={`${clicked ? "nprev" : "d-none"}`}>{links[pos + 1]}</a>
       </div>
-      <div className="nav-item d-flex row display1 rel re/d overflow-hidden">
+
+      <div className="nav-item d-flex red rel row overflow-hidden">
         <a
-          className={`${clicked ? "pprev position-absolute re/d" : ""} `}
+          className={`${clicked ? "pprev position-absolute" : ""}`}
           onClick={() => {
             setClicked(true);
           }}
           onAnimationEnd={() => {
-            updateArr(links.concat(links.splice(0, 1)));
+            // updateLinks(links.concat(links.splice(0, 1)));
             console.log(links);
             setClicked(false);
           }}
         >
-          {links[0]}
+          {links[pos + 1]}
         </a>
-        <a className={`${clicked ? "nprev " : "d-none"}`}>{links[1]}</a>
+        <a className={`${clicked ? "nprev" : "d-none"}`}>{links[pos + 2]}</a>
+      </div>
+
+
+      <div className="nav-item d-flex red rel row overflow-hidden">
+        <a
+          className={`${clicked ? "pprev position-absolute" : ""}`}
+          onClick={() => {
+            setClicked(true);
+          }}
+          onAnimationEnd={() => {
+            // updateLinks(links.concat(links.splice(0, 1)));
+            console.log(links);
+            setClicked(false);
+          }}
+        >
+          {links[pos + 2]}
+        </a>
+        <a className={`${clicked ? "nprev" : "d-none"}`}>{links[pos + 3]}</a>
       </div>
       <style jsx>
         {`
           a {
-            display: block;
-            // margin-bottom: -15px;
             line-height: 1;
-            // overflow: hidden;
             padding: 0;
             text-decoration: none !important;
             color: inherit !important;
@@ -69,8 +89,7 @@ const NavLink = () => {
           }
 
           .nav-item {
-            // height: 61px;
-            // display:flex;
+            // width: 100%;
           }
         `}
       </style>
