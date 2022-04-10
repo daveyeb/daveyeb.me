@@ -46,7 +46,7 @@ var Salut = ({ className }) => {
                 <sup className="___mobile">4</sup>
               </sup>
             </sup>
-            Engineer at Deutsche Bank
+            Engineer at IBM
           </li>
         </ul>
       </div>
