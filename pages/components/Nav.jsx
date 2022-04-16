@@ -1,19 +1,29 @@
 import { useState } from "react";
-import NavLink from "./atom/NavLink";
+import { DigiLink } from "./DigiLink";
+import { NavContext } from "./NavContext";
 
-const Nav = () => {
+export const Nav = () => {
+  var [pages, setPages] = useState({ active: 'home', pages: ['projects', 'blog', 'playlists'] });
+  const [disabled, setDisabled] = useState(false);
+
   return (
     <>
-      <div className="col-sm-1 row nav p-3 red">
-        <div className="p-0">
-          <span className="">home</span>
+      <NavContext.Provider value={[pages, setPages, disabled, setDisabled]}>
+        <div className="red col-sm-2 row p-3 nav">
+          <div>
+            <DigiLink page={pages.active}></DigiLink>
+          </div>
+          <div className="align-self-end row overflow-hidden">
+            {pages.pages.map((page, i) => (
+              <DigiLink
+                key={i}
+                page={page}
+                onPress={() => pages.active}
+              ></DigiLink>
+            ))}
+          </div>
         </div>
-        <div className="align-skelf-end ovdsferflow-hidden">
-          <NavLink pages={['blog', 'projects', 'playlists', 'home']}></NavLink>
-        </div>
-      </div>
+      </NavContext.Provider>
     </>
   );
 };
-
-export default Nav;
