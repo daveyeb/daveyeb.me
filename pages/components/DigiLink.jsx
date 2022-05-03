@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { NavContext } from "./NavContext";
+import { Link } from '@carbon/react';
 
 export const DigiLink = ({ page, onPress }) => {
   const [ref, setRef] = useState(page);
@@ -22,8 +23,8 @@ export const DigiLink = ({ page, onPress }) => {
 
   useEffect(() => {
     if (onPress === undefined) {
-        if(ref.localeCompare(pages.active) == 0) return
-        setNext(pages.active);
+      if (ref.localeCompare(pages.active) == 0) return;
+      setNext(pages.active);
     }
   }, [pages]);
 
@@ -31,28 +32,41 @@ export const DigiLink = ({ page, onPress }) => {
     <>
       <div className="rel row overflow-hidden">
         <a
-          className={`${next !== "" ? "pprev position-absolute" : ""}`}
+          className={`${next !== "" ? "pprev position-absolute" : ""}
+          ${onPress === undefined ? "" : " pointer "}"`}
           onAnimationEnd={reset}
           onClick={update}
         >
-          {ref}
+          <span className="dotted">{ref}</span>
         </a>
         <a className={`${next !== "" ? "nprev" : "d-none"}`}>{next}</a>
       </div>
       <style jsx>
         {`
-          // a {
-          //   line-height: 1
-          //   padding: 0
-          //   text-decoration: none !important
-          //   color: inherit !important
-          // }
+          a {
+            padding: 0;
+            text-decoration: none !important;
+            color: inherit !important;
+            text-rendering: optimizeLegibility;
+            cursor: default;
+          }
+
+          .pointer {
+            cursor: pointer;
+          }
+
+          .dotted {
+            border-bottom: 1px dotted #9b9b9b;
+          }
+
+          .dotted:hover {
+            border-bottom: none;
+            color: #0021e5 !important;
+          }
 
           .pprev {
             animation: p___up 0.5s forwards;
           }
-
-        
 
           .nprev {
             animation: up 0.5s forwards;

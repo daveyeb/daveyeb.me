@@ -6,6 +6,17 @@ export default function Home() {
   return (
    <>
     <Nav></Nav>
+    {/* <span className='display-1'>
+      david
+    </span> */}
+    <style jsx>
+      {`
+        span {
+          font-family: BDRmono2021;
+          // font-weight: bold;
+        }
+      `}
+    </style>
    </>
   )
 }
