@@ -29,8 +29,8 @@ var Salut = ({ className }) => {
                 <sup className="___mobile">2</sup>
               </sup>
             </sup>
-            Providing support and tooling to internal brokers to deal with
-            potential PnLs
+            Providing support and tooling <span className="cancel">to internal brokers to deal with
+            potential PnLs</span>
           </li>
           <li>
             <sup>
@@ -79,6 +79,10 @@ const Intro = () => {
           .___mobile {
             display: none !important;
           }
+        }
+
+        .cancel {
+          text-decoration: red line-through wavy;
         }
         
 
