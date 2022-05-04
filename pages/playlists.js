@@ -37,7 +37,7 @@ export default function Playlists() {
               Some tunes for the ones that enjoy music
             </div>
 
-            <iframe src="https://open.spotify.com/embed/playlist/2I7oJdNesNYYvGjsppgeJQ?utm_source=generator&theme=0" width="600" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/2I7oJdNesNYYvGjsppgeJQ?utm_source=generator&theme=0" width="100%" height="600" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
           </div>
         </div>
 
