@@ -27,7 +27,7 @@ a {
 }
 
 .rel {
-  position: relative;
+  position: fixed;
 }
 
 .pos1 {
