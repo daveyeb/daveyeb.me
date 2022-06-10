@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { NavContext } from "./NavContext";
 import { append } from "./util";
 
-export const DigitalLink = ({ children, index }) => {
+export const DigitalLink = ({ children, index, direction }) => {
   const [links, setLinks, meta, updateMeta, disabled, setDisabled] = useContext(NavContext);
   const [loading, setLoading] = useState(true);
 
@@ -36,11 +36,11 @@ export const DigitalLink = ({ children, index }) => {
     <>still lsoading</>
   ) : (
     <>
-      <div className="row position-relative overflow-hidden">
+      <div className="row position-relative overflow-hidden p-1">
         <a
           onClick={getNext}
           onAnimationEnd={reset}
-          className={`${next !== "" ? "prev position-absolute" : ""}`}
+          className={`${next !== "" ? "prev position-absolute ibm-motion-prod-move-ease-in-out ibm-motion-prod-move-dur-10" : ""}`}
         >
           <span className={`dotted ${disabled ? '' : 'pointer'}`}>{curr}</span>
         </a>
@@ -49,7 +49,7 @@ export const DigitalLink = ({ children, index }) => {
       <style jsx>{`
         a {
           text-decoration: none !important;
-          color: rgba(0,0,0,.6);
+          color: rgba(0,0,12,.69);
           text-rendering: optimizeLegibility;
           cursor: default;
         }
@@ -68,11 +68,11 @@ export const DigitalLink = ({ children, index }) => {
         }
 
         .next {
-          animation: up 0.5s forwards;
+          animation: ${direction} 0.5s forwards;
         }
 
         .prev {
-          animation: p___up 0.5s forwards;
+          animation: p___${direction} 0.5s forwards;
         }
       `}</style>
     </>
