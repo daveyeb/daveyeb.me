@@ -11,7 +11,7 @@ var Salut = ({ className }) => {
     <>
       {/* <div><strong class={` ${gov["govuk-tag"]} ${gov["govuk-tag--red"]}`}>live</strong></div> */}
       <div
-        className={`${className} ${styles["flow"]} intro wrapper  ${styles["col-md-8"]} ${styles["col-md-offset-1"]} ${styles["start-xs"]} `}
+        className={`${className} ${styles["flow"]} intro wrapper  ${styles["col-md-"]} ${styles["col-md-offset-1"]} ${styles["start-xs"]} `}
       >
         <h1 className={`salut  ${styles["pt3"]}`}>Hola I&apos;m David</h1>
         <ul className={`bckgrnd ${styles["flow"]} ${styles["pb5"]}`}>
@@ -26,19 +26,18 @@ var Salut = ({ className }) => {
           <li>
             <sup>
               <sup>
-                <sup className="___mobile">2</sup>
-              </sup>
-            </sup>
-            Providing support and tooling <span className="cancel">to internal brokers to deal with
-            potential PnLs</span>
-          </li>
-          <li>
-            <sup>
-              <sup>
                 <sup className="___mobile">3</sup>
               </sup>
             </sup>
             Computer Science graduate from Oswego State
+          </li>
+          <li>
+            <sup>
+              <sup>
+                <sup className="___mobile">2</sup>
+              </sup>
+            </sup>
+            Providing support and tooling 
           </li>
           <li>
             <sup>
