@@ -1,8 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'BDRmono 2021',-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -13,87 +17,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-.red {
-  border: 1px solid red !important;
-}
-
-.nav {
-  height: 100vh;
-  position: fixed;
-  z-index: 100;
-  font-family: BDRmono2021;
-}
-
-.rel {
-  position: fixed;
-}
-
-.pos1 {
-  top: -5em;
-}
-
-.pos2 {
-  top: -3em;
-}
-
-.pos3 {
-  top: -1em;
-}
-
-@keyframes up {
-  0% { transform: translateY(100%); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes down {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes p___up {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-100%); }
-}
-
-@keyframes p___down {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(100%); }
-}
-
-@font-face {
-  font-family: BDRmono2021;
-  src: url('/bdr_mono_2021/bdr_mono_2021/BDRmono2021-Bold.otf');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: BDRmono2021;
-  src: url('/bdr_mono_2021/bdr_mono_2021/BDRmono2021-Light.otf');
-  font-weight: lighter;
-}
-
-@font-face {
-  font-family: BDRmono2021;
-  src: url('/bdr_mono_2021/bdr_mono_2021/BDRmono2021-Light.otf');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: BDRmono2021Rounded;
-  src: url('/bdr_mono_2021/bdr_mono_2021/BDRmono2021Rounded-Bold.otf');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: BDRmono2021Rounded;
-  src: url('/bdr_mono_2021/bdr_mono_2021/BDRmono2021Rounded-Light.otf');
-  font-weight: lighter;
-}
-
-@font-face {
-  font-family: BDRmono2021Rounded;
-  src: url('/bdr_mono_2021/bdr_mono_2021/BDRmono2021Rounded-Light.otf');
-  font-weight: normal;
 }
