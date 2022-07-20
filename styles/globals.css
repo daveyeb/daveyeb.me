@@ -18,3 +18,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.fiji {
+  display: inline-block;
+}
