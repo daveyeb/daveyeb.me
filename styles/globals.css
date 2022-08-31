@@ -6,8 +6,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'BDRmono 2021',-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'BDRmono2021Rounded-Light',-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  
 }
 
 a {
@@ -21,4 +22,8 @@ a {
 
 .fiji {
   display: inline-block;
+}
+
+.red {
+  border: 1px solid !important;
 }
