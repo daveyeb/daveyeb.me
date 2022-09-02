@@ -18,7 +18,7 @@ export default function Home() {
           <span><h1>david</h1></span>
         </div>
         <p className='md:w-2/6 mt-5 md:ml-24 opacity-90'>
-        software developer at ibm in durham
+        software developer at ibm rtp
         , working on making a productive environment for ibm employees
                 worldwide and to also deliver the future of IT.
         </p>
