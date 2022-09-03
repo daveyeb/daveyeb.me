@@ -1,14 +1,30 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import Script from 'next/script'
+import { useEffect } from 'react'
 import styles from '../styles/Home.module.css'
 
+
+
 export default function Home() {
+  useEffect(()=>{
+    if(window != undefined){
+      console.log('heya')
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-176178393-1');
+  
+    }
+  },[])
+
   return (
     <div className={styles.container}>
       <Head>
         <title>david yebōah , swe | home</title>
         <meta name="description" content="personal website of david.yeboah" />
         <link rel="icon" href="/favicon.ico" />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-176178393-1"></Script>
       </Head>
 
       <main className="">
@@ -22,10 +38,7 @@ export default function Home() {
         , working on making a productive environment for ibm employees
                 worldwide and to also deliver the future of IT.
         </p>
-        <a className='hidden mt-5 w-32 block md:ml-24 button'>Read More</a>
-        {/* <a title="Google Analytics Alternative" href="https://clicky.com/101379145"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a> */}
-        <script async src="//static.getclicky.com/101379145.js"></script>
-        <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101379145ns.gif" /></p></noscript>
+        <a className='mt-5 w-32 block md:ml-24 button p-6'>Read More</a>
       </main>
       <footer className='fixed bottom-2 uppercase'>
         <a className='hidden block'>menu</a>
