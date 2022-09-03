@@ -38,7 +38,7 @@ export default function Home() {
         , working on making a productive environment for ibm employees
                 worldwide and to also deliver the future of IT.
         </p>
-        <a className='mt-5 w-32 block md:ml-24 button p-6'>Read More</a>
+        <a className='hidden mt-5 w-32 block md:ml-24 button p-6'>Read More</a>
       </main>
       <footer className='fixed bottom-2 uppercase'>
         <a className='hidden block'>menu</a>
