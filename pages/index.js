@@ -24,7 +24,6 @@ export default function Home() {
         <title>david yebōah , swe | home</title>
         <meta name="description" content="personal website of david.yeboah" />
         <link rel="icon" href="/favicon.ico" />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-176178393-1"></Script>
       </Head>
 
       <main className="">
@@ -39,6 +38,7 @@ export default function Home() {
                 worldwide and to also deliver the future of IT.
         </p>
         <a className='hidden mt-5 w-32 block md:ml-24 button p-6'>Read More</a>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-176178393-1"></Script>
       </main>
       <footer className='fixed bottom-2 uppercase'>
         <a className='hidden block'>menu</a>
