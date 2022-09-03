@@ -23,6 +23,9 @@ export default function Home() {
                 worldwide and to also deliver the future of IT.
         </p>
         <a className='hidden mt-5 w-32 block md:ml-24 button'>Read More</a>
+        {/* <a title="Google Analytics Alternative" href="https://clicky.com/101379145"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a> */}
+        <script async src="//static.getclicky.com/101379145.js"></script>
+        <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101379145ns.gif" /></p></noscript>
       </main>
       <footer className='fixed bottom-2 uppercase'>
         <a className='hidden block'>menu</a>
