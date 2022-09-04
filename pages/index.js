@@ -6,17 +6,17 @@ import styles from '../styles/Home.module.css'
 
 
 export default function Home() {
-  useEffect(()=>{
-    if(window != undefined){
+  useEffect(() => {
+    if (window != undefined) {
       console.log('heya')
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-    
+
       gtag('config', 'UA-176178393-1');
-  
+
     }
-  },[])
+  }, [])
 
   return (
     <div className={styles.container}>
@@ -27,17 +27,20 @@ export default function Home() {
       </Head>
 
       <main className="">
-        <div className="flex-1 w-2/6 text-4xl mt-10 md:mt-60 md:ml-24">
-          <span><h1 className=" ">hola</h1></span>
-          <span><h1>i&apos;m</h1></span>
-          <span><h1>david</h1></span>
+        <div>
+          <div className="flex-1 w-2/6 text-4xl mt-10 md:mt-60 md:ml-24">
+            <span><h1 className=" ">hola</h1></span>
+            <span><h1>i&apos;m</h1></span>
+            <span><h1>david</h1></span>
+          </div>
+          <p className='md:w-2/6 mt-5 md:ml-24 opacity-90'>
+            software developer at ibm rtp
+            , working on making a productive environment for ibm employees
+            worldwide and to also deliver the future of IT.
+          </p>
+          <a className='hidden mt-5 w-32 block md:ml-24 button text-center rounded-lg  '>Read More</a>
         </div>
-        <p className='md:w-2/6 mt-5 md:ml-24 opacity-90'>
-        software developer at ibm rtp
-        , working on making a productive environment for ibm employees
-                worldwide and to also deliver the future of IT.
-        </p>
-        <a className='hidden mt-5 w-32 block md:ml-24 button p-6'>Read More</a>
+
         <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-176178393-1"></Script>
       </main>
       <footer className='fixed bottom-2 uppercase'>
