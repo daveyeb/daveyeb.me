@@ -1,22 +1,39 @@
 import Head from 'next/head'
 import Script from 'next/script'
-import { useEffect } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 
-
+const greetings = [
+  'hola',
+  'hello',
+  'bonjour',
+  'hallo',
+  'yo',
+  'salām',
+  'ciao',
+  'Привет'
+]
 
 export default function Home() {
+  const [greeting, setGreeting] = useState(greetings[0]);
+  const shuffle = useCallback(()=> {
+    
+    setGreeting(greetings[(greetings.indexOf(greeting) + 1) % greetings.length])
+  })
+
   useEffect(() => {
     if (window != undefined) {
-      console.log('heya')
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
 
       gtag('config', 'UA-176178393-1');
-
     }
-  }, [])
+
+    const intervalID = setInterval(shuffle, 1000)
+    return () => clearInterval(intervalID)
+
+  }, [shuffle])
 
   return (
     <div className={styles.container}>
@@ -28,17 +45,17 @@ export default function Home() {
 
       <main className="">
         <div>
-          <div className="flex-1 w-2/6 text-4xl mt-10 md:mt-60 md:ml-24">
-            <span><h1 className=" ">hola</h1></span>
+          <div className="flex-1 bold-text w-2/6 text-4xl mt-20 md:mt-60 md:ml-24">
+            <span><h1 className=" ">{greeting}</h1></span>
             <span><h1>i&apos;m</h1></span>
             <span><h1>david</h1></span>
           </div>
-          <p className='md:w-2/6 mt-5 md:ml-24 opacity-90'>
+          <p className='md:w-2/6 mt-5 md:ml-24 opacity-90 pg-text '>
             software developer at ibm rtp
             , working on making a productive environment for ibm employees
             worldwide and to also deliver the future of IT.
           </p>
-          <a className='hidden mt-5 w-32 block md:ml-24 button text-center rounded-lg  '>Read More</a>
+          <a className='hidden mt-5 w-32 block md:ml-24 button text-center rounded-lg left-1.5 absolute'>Read More</a>
         </div>
 
         <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-176178393-1"></Script>
@@ -52,11 +69,21 @@ export default function Home() {
         .button {
           // border: 1px solid coral;
           transition: all 0.15s ease 0s;
+          color: #8d0125;
+          cursor: pointer;
         }
 
         .button:hover {
-          color: purple;
+          color: rgba(141, 1, 37, 0.8);
           background-color: rgba(221, 221, 221, 0.2);
+        }
+
+        .bold-text {
+          // color: #586c72!important;
+        }
+
+        .pg-text {
+          // color: #6e9197!important;
         }
 
         .button:active {
