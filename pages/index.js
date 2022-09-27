@@ -32,9 +32,9 @@ export default function Home() {
       gtag('config', 'UA-176178393-1');
 
       if(window.location.search.includes("code")){
-        console.log(window.location.pathname + "api/hello/" + window.location.search)
+        // console.log(window.location.pathname + "api/hello/" + window.location.search)
         fetch(window.location.pathname + "api/hello" + window.location.search).then(res => {
-          console.log(res.json())
+          // console.log(res.json())
         });
       }
       
