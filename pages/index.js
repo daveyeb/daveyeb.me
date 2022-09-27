@@ -17,19 +17,32 @@ const greetings = [
 export default function Home() {
   const [greeting, setGreeting] = useState(greetings[0]);
   const shuffle = useCallback(()=> {
-    
     setGreeting(greetings[(greetings.indexOf(greeting) + 1) % greetings.length])
   })
 
-  useEffect(() => {
-    if (window != undefined) {
+// https://daveyeb.me/?code=4/0ARtbsJp7XVmenoZ6KzA7pL9i1a2yFBYFDrgCf_22CFJP_nmgMq6AQ8UUke5wW5Z6rWqGMQ&scope=https://www.googleapis.com/auth/sdm.service
+
+  useEffect(()=> 
+  {
+    if (window != undefined ) {
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
 
       gtag('config', 'UA-176178393-1');
+
+      if(window.location.search.includes("code")){
+        console.log(window.location.pathname + "api/hello/" + window.location.search)
+        fetch(window.location.pathname + "api/hello" + window.location.search).then(res => {
+          console.log(res.json())
+        });
+      }
+      
     }
 
+  }, [])
+
+  useEffect(() => {
     const intervalID = setInterval(shuffle, 1000)
     return () => clearInterval(intervalID)
 
@@ -62,7 +75,7 @@ export default function Home() {
             , working on making a productive environment for ibm employees
             worldwide and to also deliver the future of IT.
           </p>
-          <a className='hidden mt-5 w-32 block md:ml-24 button text-center rounded-lg left-1.5 absolute'>Read More</a>
+          <a className='hidden mt-5 w-32 block md:ml-24 button text-center rounded-lg left-1.5 absolute'>Randomize</a>
         </div>
 
         <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-176178393-1"></Script>
