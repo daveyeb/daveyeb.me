@@ -14,6 +14,11 @@ const greetings = [
   'Привет'
 ]
 
+const warInUkraine = () => {
+  const w = window.open('https://www.google.com/search?q=war%20in%20ukraine#ip=1', '_blank')
+  if(w) w.focus()
+}
+
 export default function Home() {
   const [greeting, setGreeting] = useState(greetings[0]);
   const shuffle = useCallback(()=> {
@@ -65,7 +70,7 @@ export default function Home() {
 
       <main className="">
         <div>
-          <div className="flex-1 bold-text w-2/6 text-4xl mt-20 md:mt-60 md:ml-24">
+          <div className="flex-1 bold-text w-2/6 text-4xl mt-20 md:mt-60 md:ml-24" onClick={warInUkraine}>
             <span><h1 className=" " style={{color:	"#005BBB"}}>{greeting}</h1></span>
             <span><h1 style={{color:	"#FFD500"}}>i&apos;m</h1></span>
             <span><h1 style={{color:	"#FFD500"}}>david</h1></span>
