@@ -70,10 +70,10 @@ export default function Home() {
 
       <main className="">
         <div>
-          <div className="flex-1 bold-text w-2/6 text-4xl mt-20 md:mt-60 md:ml-24" onClick={warInUkraine}>
-            <span><h1 className=" " style={{color:	"#005BBB"}}>{greeting}</h1></span>
-            <span><h1 style={{color:	"#FFD500"}}>i&apos;m</h1></span>
-            <span><h1 style={{color:	"#FFD500"}}>david</h1></span>
+          <div className="flex-1 salu bold-text w-2/6 text-4xl mt-20 md:mt-60 md:ml-24" onClick={warInUkraine}>
+            <h1 style={{color:	"#005BBB"}}><span>{greeting}</span></h1>
+            <h1 style={{color:	"#FFD500"}}><span>i&apos;m</span></h1>
+            <h1 style={{color:	"#FFD500"}}><span>david</span></h1>
           </div>
           <p className='md:w-2/6 mt-5 md:ml-24 opacity-90 pg-text '>
             software developer at ibm rtp
@@ -109,6 +109,10 @@ export default function Home() {
 
         .pg-text {
           // color: #6e9197!important;
+        }
+
+        h1 > span {
+          cursor: pointer;
         }
 
         .button:active {
