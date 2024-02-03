@@ -6,6 +6,10 @@
   border: 1px solid coral !important;
 }
 
+.yel {
+  border: 1px solid yellowgreen !important;
+}
+
 @font-face {
   font-family: 'ibm3270';
   src: url('/3270-Regular.woff');
@@ -19,14 +23,19 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-/* a {
-  color: inherit;
+a {
+  color: blue;
   text-decoration: none;
+  cursor:pointer;
+}
+
+.project-list {
+  cursor:pointer;
 }
 
 * {
   box-sizing: border-box;
-} */
+} 
 
 /* @media (prefers-color-scheme: dark) {
   html {

@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Script from 'next/script'
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const greetings = [
   'hola',
@@ -30,13 +31,17 @@ const linkedInPage = () => {
     if (w) w.focus()
   }
 
-export default function Home() {
-  const [greeting, setGreeting] = useState(greetings[0]);
-  const shuffle = useCallback(() => {
-    setGreeting(greetings[(greetings.indexOf(greeting) + 1) % greetings.length])
-  })
 
-  // https://daveyeb.me/?code=4/0ARtbsJp7XVmenoZ6KzA7pL9i1a2yFBYFDrgCf_22CFJP_nmgMq6AQ8UUke5wW5Z6rWqGMQ&scope=https://www.googleapis.com/auth/sdm.service
+  const hikiki = () => {
+    const w = window.open('spotify://playlist/6fe0TqRULovt3RySqvXh1w')
+    if (w) w.focus()
+  }
+
+  const delulu = () => {
+    const w = window.open('spotify://playlist/7iXMp4T8XJdR2juqf60qi2')
+    if (w) w.focus()
+  }
+export default function Home() {
 
   useEffect(() => {
     if (window != undefined) {
@@ -57,16 +62,14 @@ export default function Home() {
 
   }, [])
 
-  useEffect(() => {
-    const intervalID = setInterval(shuffle, 1000)
-    return () => clearInterval(intervalID)
-
-  }, [shuffle])
+  const [hidden, setHidden] = useState("hidden");
+  const [list, setList] = useState("");
+  const onMouseLeave = () => setHidden("hidden");
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>david yebōah , swe | home</title>
+        <title>david yebōah , swe | playlist</title>
         <meta name="description" content="personal website of david.yeboah" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
@@ -78,36 +81,57 @@ export default function Home() {
         <meta name="theme-color" content="#ffffff" />
       </Head>
 
-      <main className="">
-        <div>
-          <div className="flex-1 salu bold-text w-1/6 text-4xl mt-20 md:mt-60 md:ml-24" onClick={warInUkraine}>
-            <h1 style={{ color: "#005BBB" }}><span>{greeting}</span></h1>
-            <h1 style={{ color: "#FFD500" }}><span>i&apos;m</span></h1>
-            <h1 style={{ color: "#FFD500" }}><span>david</span></h1>
+      <main className="flex">
+        <div className="sm:w-6/6 md:w-6/12">
+          <div className="flex-1 salu bold-text w-6/6 text-4xl mt-20 md:mt-60 md:ml-24" onClick={warInUkraine}>
+            <h1 style={{ color: "#FFD500" }}><span>playlist </span><span>🥁</span></h1>
           </div>
-          <p className='md:w-2/6 mt-5 md:ml-24 opacity-90 pg-text '>
-            software developer at ibm - working on making a productive environment for ibm employees
-            worldwide and to also deliver the future of IT.
-
+          <p className='sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-90 pg-text '>
+            Here's some of my favorite playlist made by friends that i tend to listen when i'm working or want to kill some time. 
+            Feel free to save it or like it, it really do motivates my Gen-Z friends (:
           </p>
+
+          <ul className="sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-90 pg-text ">
+                        <li className="project-list" onMouseEnter={() => {
+                            setList("https://i.scdn.co/image/ab67706c0000da8497383c1f6a57b60b6230c9df")
+                            setHidden("")
+                        }} onMouseLeave={onMouseLeave} onClick={delulu}>
+                            <h3 className="text-2xl">Désillusion en esti <span >🔗</span></h3>
+                        </li>
+                        <li className="mt-2 project-list" onMouseEnter={() => {
+                            setList("https://i.scdn.co/image/ab67706c0000da84663367b29fef5185ca6bd979")
+                            setHidden("")
+                        }} onMouseLeave={onMouseLeave} onClick={hikiki}>
+                            <h3 className="text-2xl">KHIKHII <span>🔗</span></h3>
+                        </li>
+                    </ul>
+
+                    {/* <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6fe0TqRULovt3RySqvXh1w?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
 
           <div className="mt-5 md:ml-24"> 
           <Link href="/projects" className=' mt-6 uppercase pr-1'>projects</Link><span>|</span>
           <a className='pl-1 mt-6 uppercase pr-1' onClick={githubPage}>github</a><span>|</span>
           <a className='pl-1 mt-6 uppercase pr-1' onClick={linkedInPage}>linkedin</a><span>|</span>
-          <Link href="/playlist" className='pl-1 mt-6 uppercase pr-1'>playlist</Link>
+          <Link href="/" className='pl-1 mt-6 uppercase pr-1'>home</Link>
           </div>
 
           <a className='hidden mt-5 w-32 block md:ml-24 button text-center rounded-lg left-1.5 absolute'>Randomize</a>
         </div>
 
+        <div className={` w-6/12 mt-20 md:mt-60 grid place-content-center ${hidden}`}>
+                    <Image
+                        src={list}
+                        width={500}
+                        height={500}
+                        sizes='100vw'
+                        loading="lazy"
+                    />
+                </div>
 
         <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-176178393-1"></Script>
       </main>
       <footer className='fixed bottom-2 uppercase'>
 
-        {/* <a className='block'>musiclists</a>
-        <a className='block'>blog</a> */}
       </footer>
       <style jsx>{`
         .button {
