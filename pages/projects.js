@@ -76,7 +76,7 @@ export default function Home() {
                         <h1 style={{ color: "#FFD500" }}><span>projects </span><span>📽️</span></h1>
                     </div>
                     <p className='sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-90 pg-text'>
-                        These are two projects I'm currently working on. I chose to write both of them in Rust for the backend and experiment
+                        These are two projects I&apos;m currently working on. I chose to write both of them in Rust for the backend and experiment
                         with different front-end frameworks with each one. Hover on them to know a little bit more about tech stacks used for the following projects:
 
                     </p>

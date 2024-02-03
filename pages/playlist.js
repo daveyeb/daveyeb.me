@@ -87,7 +87,7 @@ export default function Home() {
             <h1 style={{ color: "#FFD500" }}><span>playlist </span><span>🥁</span></h1>
           </div>
           <p className='sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-90 pg-text '>
-            Here's some of my favorite playlist made by friends that i tend to listen when i'm working or want to kill some time. 
+            Here&apos;s some of my favorite playlist made by friends that i tend to listen when i&apos;m working or want to kill some time. 
             Feel free to save it or like it, it really do motivates my Gen-Z friends (:
           </p>
 
