@@ -31,7 +31,6 @@ const linkedInPage = () => {
     if (w) w.focus()
   }
 
-
   const hikiki = () => {
     const w = window.open('spotify://playlist/6fe0TqRULovt3RySqvXh1w')
     if (w) w.focus()
@@ -96,7 +95,7 @@ export default function Home() {
                             setList("https://i.scdn.co/image/ab67706c0000da8497383c1f6a57b60b6230c9df")
                             setHidden("")
                         }} onMouseLeave={onMouseLeave} onClick={delulu}>
-                            <h3 className="text-2xl">Désillusion en esti <span >🔗</span></h3>
+                            <h3 className="text-2xl">Désillusion<span >🔗</span></h3>
                         </li>
                         <li className="mt-2 project-list" onMouseEnter={() => {
                             setList("https://i.scdn.co/image/ab67706c0000da84663367b29fef5185ca6bd979")
