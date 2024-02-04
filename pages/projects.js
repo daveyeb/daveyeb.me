@@ -17,7 +17,7 @@ const linkedInPage = () => {
 }
 
 const rmapPage = () => {
-    const w = window.open('https://linkedin.com/in/daveyeb', '_blank')
+    const w = window.open('https://moazl72kkqrgr57xycho2qzqzi0efgpy.lambda-url.us-east-1.on.aws/', '_blank')
     if (w) w.focus()
 }
 
