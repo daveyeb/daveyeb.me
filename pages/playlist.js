@@ -48,7 +48,7 @@ export default function Home() {
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
 
-      gtag('config', 'UA-176178393-1');
+      gtag('config', 'G-691EMM8GS8');
 
       if (window.location.search.includes("code")) {
         // console.log(window.location.pathname + "api/hello/" + window.location.search)
@@ -127,7 +127,7 @@ export default function Home() {
                     />
                 </div>
 
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-176178393-1"></Script>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-691EMM8GS8"></Script>
       </main>
       <footer className='fixed bottom-2 uppercase'>
 
