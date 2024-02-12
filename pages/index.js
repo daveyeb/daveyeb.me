@@ -94,7 +94,7 @@ export default function Home() {
           <div className="mt-5 md:ml-24"> 
           <Link href="/projects" className=' mt-6 uppercase pr-1'>projects</Link><span>|</span>
           <a className='pl-1 mt-6 uppercase pr-1' onClick={githubPage}>github</a><span>|</span>
-          <a className='pl-1 mt-6 uppercase pr-1' onClick={linkedInPage}>linkedin</a><span>|</span>
+          <a className='pl-1 mt-6 uppercase pr-1' onClick={linkedInPage}>linkedin</a>
           {/* <Link href="/playlist" className='pl-1 mt-6 uppercase pr-1'>playlist</Link> */}
           </div>
 
