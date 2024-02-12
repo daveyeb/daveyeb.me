@@ -95,7 +95,7 @@ export default function Home() {
           <Link href="/projects" className=' mt-6 uppercase pr-1'>projects</Link><span>|</span>
           <a className='pl-1 mt-6 uppercase pr-1' onClick={githubPage}>github</a><span>|</span>
           <a className='pl-1 mt-6 uppercase pr-1' onClick={linkedInPage}>linkedin</a><span>|</span>
-          <Link href="/playlist" className='pl-1 mt-6 uppercase pr-1'>playlist</Link>
+          {/* <Link href="/playlist" className='pl-1 mt-6 uppercase pr-1'>playlist</Link> */}
           </div>
 
           <a className='hidden mt-5 w-32 block md:ml-24 button text-center rounded-lg left-1.5 absolute'>Randomize</a>
