@@ -26,9 +26,9 @@ const githubPage = () => {
 }
 
 const linkedInPage = () => {
-    const w = window.open('https://linkedin.com/in/daveyeb', '_blank')
-    if (w) w.focus()
-  }
+  const w = window.open('https://linkedin.com/in/daveyeb', '_blank')
+  if (w) w.focus()
+}
 
 export default function Home() {
   const [greeting, setGreeting] = useState(greetings[0]);
@@ -80,22 +80,22 @@ export default function Home() {
 
       <main className="">
         <div>
-          <div className="flex-1 salu bold-text w-1/6 text-4xl mt-20 md:mt-60 md:ml-24" onClick={warInUkraine}>
+          <div className="flex-1 salu bold-text w-1/6 text-5xl mt-20 md:mt-60 md:ml-24" onClick={warInUkraine}>
             <h1 style={{ color: "#005BBB" }}><span>{greeting}</span></h1>
             <h1 style={{ color: "#FFD500" }}><span>i&apos;m</span></h1>
             <h1 style={{ color: "#FFD500" }}><span>david</span></h1>
           </div>
-          <p className='md:w-2/6 mt-5 md:ml-24 opacity-90 pg-text '>
+          <p className='md:w-2/6 mt-5 md:ml-24 opacity-90 pg-text text-lg'>
             software developer at ibm - working on making a productive environment for ibm employees
             worldwide and to also deliver the future of IT.
 
           </p>
 
-          <div className="mt-5 md:ml-24"> 
-          <Link href="/projects" className=' mt-6 uppercase pr-1'>projects</Link><span>|</span>
-          <a className='pl-1 mt-6 uppercase pr-1' onClick={githubPage}>github</a><span>|</span>
-          <a className='pl-1 mt-6 uppercase pr-1' onClick={linkedInPage}>linkedin</a>
-          {/* <Link href="/playlist" className='pl-1 mt-6 uppercase pr-1'>playlist</Link> */}
+          <div className="mt-5 md:ml-24 text-xl">
+            <Link href="/projects" className=' mt-6 uppercase pr-1' style={{ color: "#005BBB" }}>projects</Link><span>|</span>
+            <a className='pl-1 mt-6 uppercase pr-1' onClick={githubPage} style={{ color: "#005BBB" }}>github</a><span>|</span>
+            <a className='pl-1 mt-6 uppercase pr-1' onClick={linkedInPage} style={{ color: "#005BBB" }}>linkedin</a><span>|</span>
+            <Link href="/playlist" className='pl-1 mt-6 uppercase pr-1' style={{ color: "#005BBB" }}>playlist</Link>
           </div>
 
           <a className='hidden mt-5 w-32 block md:ml-24 button text-center rounded-lg left-1.5 absolute'>Randomize</a>
