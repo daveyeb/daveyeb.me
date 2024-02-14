@@ -82,10 +82,10 @@ export default function Home() {
 
       <main className="flex">
         <div className="sm:w-6/6 md:w-6/12">
-          <div className="flex-1 salu bold-text w-6/6 text-5xl mt-20 md:mt-60 md:ml-24" onClick={warInUkraine}>
+          <div className="flex-1 salu bold-text w-6/6 text-4xl mt-20 md:mt-60 md:ml-24" onClick={warInUkraine}>
             <h1 style={{ color: "#FFD500" }}><span>playlist </span><span>🥁</span></h1>
           </div>
-          <p className='sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-90 pg-text text-lg'>
+          <p className='sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-90 pg-text text-l'>
             Here&apos;s some of my favorite playlists made by friends that i tend to listen when i&apos;m working or want to kill some time. 
             Feel free to save it or like it, it really do motivates my Gen-Z friends (:
           </p>
@@ -95,19 +95,19 @@ export default function Home() {
                             setList("https://i.scdn.co/image/ab67706c0000da8497383c1f6a57b60b6230c9df")
                             setHidden("")
                         }} onMouseLeave={onMouseLeave} onClick={delulu}>
-                            <h3 className="text-3xl">Désillusion <span >🔗</span></h3>
+                            <h3 className="text-2xl">Désillusion <span >🔗</span></h3>
                         </li>
                         <li className="mt-2 project-list" onMouseEnter={() => {
                             setList("https://i.scdn.co/image/ab67706c0000da84663367b29fef5185ca6bd979")
                             setHidden("")
                         }} onMouseLeave={onMouseLeave} onClick={hikiki}>
-                            <h3 className="text-3xl">KHIKHII <span>🔗</span></h3>
+                            <h3 className="text-2xl">KHIKHII <span>🔗</span></h3>
                         </li>
                     </ul>
 
                     {/* <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6fe0TqRULovt3RySqvXh1w?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
 
-          <div className="mt-5 md:ml-24 text-xl"> 
+          <div className="mt-5 md:ml-24 text-lg"> 
           <Link href="/projects" className=' mt-6 uppercase pr-1' style={{ color: "#005BBB" }}>projects</Link><span>|</span>
           <a className='pl-1 mt-6 uppercase pr-1' onClick={githubPage} style={{ color: "#005BBB" }}>github</a><span>|</span>
           <a className='pl-1 mt-6 uppercase pr-1' onClick={linkedInPage} style={{ color: "#005BBB" }}>linkedin</a><span>|</span>

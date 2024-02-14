@@ -80,18 +80,18 @@ export default function Home() {
 
       <main className="">
         <div>
-          <div className="flex-1 salu bold-text w-1/6 text-5xl mt-20 md:mt-60 md:ml-24" onClick={warInUkraine}>
+          <div className="flex-1 salu bold-text w-1/6 text-4xl mt-20 md:mt-60 md:ml-24" onClick={warInUkraine}>
             <h1 style={{ color: "#005BBB" }}><span>{greeting}</span></h1>
             <h1 style={{ color: "#FFD500" }}><span>i&apos;m</span></h1>
             <h1 style={{ color: "#FFD500" }}><span>david</span></h1>
           </div>
-          <p className='md:w-2/6 mt-5 md:ml-24 opacity-90 pg-text text-lg'>
+          <p className='md:w-2/6 mt-5 md:ml-24 opacity-90 pg-text '>
             software developer at ibm - working on making a productive environment for ibm employees
             worldwide and to also deliver the future of IT.
 
           </p>
 
-          <div className="mt-5 md:ml-24 text-xl">
+          <div className="mt-5 md:ml-24 text-lg">
             <Link href="/projects" className=' mt-6 uppercase pr-1' style={{ color: "#005BBB" }}>projects</Link><span>|</span>
             <a className='pl-1 mt-6 uppercase pr-1' onClick={githubPage} style={{ color: "#005BBB" }}>github</a><span>|</span>
             <a className='pl-1 mt-6 uppercase pr-1' onClick={linkedInPage} style={{ color: "#005BBB" }}>linkedin</a><span>|</span>
