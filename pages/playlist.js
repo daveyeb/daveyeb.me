@@ -27,19 +27,19 @@ const githubPage = () => {
 }
 
 const linkedInPage = () => {
-    const w = window.open('https://linkedin.com/in/daveyeb', '_blank')
-    if (w) w.focus()
-  }
+  const w = window.open('https://linkedin.com/in/daveyeb', '_blank')
+  if (w) w.focus()
+}
 
-  const hikiki = () => {
-    const w = window.open('spotify://playlist/6fe0TqRULovt3RySqvXh1w')
-    if (w) w.focus()
-  }
+const hikiki = () => {
+  const w = window.open('spotify://playlist/6fe0TqRULovt3RySqvXh1w')
+  if (w) w.focus()
+}
 
-  const delulu = () => {
-    const w = window.open('spotify://playlist/7iXMp4T8XJdR2juqf60qi2')
-    if (w) w.focus()
-  }
+const delulu = () => {
+  const w = window.open('spotify://playlist/7iXMp4T8XJdR2juqf60qi2')
+  if (w) w.focus()
+}
 export default function Home() {
 
   useEffect(() => {
@@ -86,45 +86,45 @@ export default function Home() {
             <h1 style={{ color: "#FFD500" }}><span>playlist </span><span>🥁</span></h1>
           </div>
           <p className='sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-90 pg-text text-l'>
-            Here are some playlists my friends made that I like to listen to when I'm working or just hanging out. Feel free to save or like them. It really motivates my Gen-Z friends! (:
+
+            Here are some playlists my friends made that I like to listen to when I&apos;m working or just hanging out. Feel free to save or like them. It really motivates my Gen-Z friends (:
           </p>
-
           <ul className="sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-90 pg-text ">
-                        <li className="project-list" onMouseEnter={() => {
-                            setList("https://i.scdn.co/image/ab67706c0000da8497383c1f6a57b60b6230c9df")
-                            setHidden("")
-                        }} onMouseLeave={onMouseLeave} onClick={delulu}>
-                            <h3 className="text-2xl">Désillusion <span >🔗</span></h3>
-                        </li>
-                        <li className="mt-2 project-list" onMouseEnter={() => {
-                            setList("https://i.scdn.co/image/ab67706c0000da84663367b29fef5185ca6bd979")
-                            setHidden("")
-                        }} onMouseLeave={onMouseLeave} onClick={hikiki}>
-                            <h3 className="text-2xl">KHIKHII <span>🔗</span></h3>
-                        </li>
-                    </ul>
+            <li className="project-list" onMouseEnter={() => {
+              setList("https://i.scdn.co/image/ab67706c0000da8497383c1f6a57b60b6230c9df")
+              setHidden("")
+            }} onMouseLeave={onMouseLeave} onClick={delulu}>
+              <h3 className="text-2xl">Désillusion <span >🔗</span></h3>
+            </li>
+            <li className="mt-2 project-list" onMouseEnter={() => {
+              setList("https://i.scdn.co/image/ab67706c0000da84663367b29fef5185ca6bd979")
+              setHidden("")
+            }} onMouseLeave={onMouseLeave} onClick={hikiki}>
+              <h3 className="text-2xl">KHIKHII <span>🔗</span></h3>
+            </li>
+          </ul>
 
-                    {/* <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6fe0TqRULovt3RySqvXh1w?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
+          {/* <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6fe0TqRULovt3RySqvXh1w?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
 
-          <div className="mt-5 md:ml-24 text-lg"> 
-          <Link href="/projects" className=' mt-6 uppercase pr-1' style={{ color: "#005BBB" }}>projects</Link><span>|</span>
-          <a className='pl-1 mt-6 uppercase pr-1' onClick={githubPage} style={{ color: "#005BBB" }}>github</a><span>|</span>
-          <a className='pl-1 mt-6 uppercase pr-1' onClick={linkedInPage} style={{ color: "#005BBB" }}>linkedin</a><span>|</span>
-          <Link href="/" className='pl-1 mt-6 uppercase pr-1' style={{ color: "#005BBB" }}>home</Link>
+          <div className="mt-5 md:ml-24 text-lg">
+            <Link href="/projects" className=' mt-6 uppercase pr-1' style={{ color: "#005BBB" }}>projects</Link><span>|</span>
+            <a className='pl-1 mt-6 uppercase pr-1' onClick={githubPage} style={{ color: "#005BBB" }}>github</a><span>|</span>
+            <a className='pl-1 mt-6 uppercase pr-1' onClick={linkedInPage} style={{ color: "#005BBB" }}>linkedin</a><span>|</span>
+            <Link href="/" className='pl-1 mt-6 uppercase pr-1' style={{ color: "#005BBB" }}>home</Link>
           </div>
 
           <a className='hidden mt-5 w-32 block md:ml-24 button text-center rounded-lg left-1.5 absolute'>Randomize</a>
         </div>
 
         <div className={` w-6/12 mt-20 md:mt-60 grid place-content-center ${hidden}`}>
-                    <Image
-                        src={list}
-                        width={500}
-                        height={500}
-                        sizes='100vw'
-                        loading="lazy"
-                    />
-                </div>
+          <Image
+            src={list}
+            width={500}
+            height={500}
+            sizes='100vw'
+            loading="lazy"
+          />
+        </div>
 
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-691EMM8GS8"></Script>
       </main>
