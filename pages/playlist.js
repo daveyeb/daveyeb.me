@@ -87,7 +87,7 @@ export default function Home() {
           </div>
           <p className='sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-90 pg-text text-l'>
 
-            Here are some playlists my friends made that I like to listen to when I&apos;m working or just hanging out. Feel free to save or like them. It really motivates my Gen-Z friends (:
+            Here are some playlists my friends made that I like to listen to when I&apos;m working or just hanging out. Feel free to save or like them. (:
           </p>
           <ul className="sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-90 pg-text ">
             <li className="project-list" onMouseEnter={() => {
