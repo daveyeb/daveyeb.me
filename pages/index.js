@@ -92,10 +92,10 @@ export default function Home() {
           </p>
 
           <div className="mt-5 md:ml-24 text-lg">
-            <Link href="/projects" className=' mt-6 uppercase pr-1' style={{ color: "#005BBB" }}>projects</Link><span>|</span>
-            <a className='pl-1 mt-6 uppercase pr-1' onClick={githubPage} style={{ color: "#005BBB" }}>github</a><span>|</span>
-            <a className='pl-1 mt-6 uppercase pr-1' onClick={linkedInPage} style={{ color: "#005BBB" }}>linkedin</a><span>|</span>
-            <Link href="/playlist" className='pl-1 mt-6 uppercase pr-1' style={{ color: "#005BBB" }}>playlist</Link>
+            <Link href="/projects" className=' mt-6 uppercase  hover:underline  pr-1' style={{ color: "#005BBB" }}>projects</Link><span>|</span>
+            <a className='pl-1 mt-6 uppercase  hover:underline pr-1' onClick={githubPage} style={{ color: "#005BBB" }}>github</a><span>|</span>
+            <a className='pl-1 mt-6 uppercase   hover:underline pr-1' onClick={linkedInPage} style={{ color: "#005BBB" }}>linkedin</a>
+            {/* <Link href="/playlist" className='pl-1 mt-6 uppercase pr-1' style={{ color: "#005BBB" }}>playlist</Link> */}
           </div>
 
           <a className='hidden mt-5 w-32 block md:ml-24 button text-center rounded-lg left-1.5 absolute'>Randomize</a>

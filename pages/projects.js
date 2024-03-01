@@ -21,15 +21,20 @@ const rmapPage = () => {
     if (w) w.focus()
 }
 
-const enigmaPage = () => {
+const rmapSource = () => {
+    const w = window.open('https://github.com/daveyeb/rmap.rs', '_blank')
+    if (w) w.focus()
+}
+
+const enigmaSource = () => {
     const w = window.open('https://github.com/daveyeb/enigma.rs', '_blank')
     if (w) w.focus()
 }
 
+
+
 export default function Home() {
 
-
-    // https://daveyeb.me/?code=4/0ARtbsJp7XVmenoZ6KzA7pL9i1a2yFBYFDrgCf_22CFJP_nmgMq6AQ8UUke5wW5Z6rWqGMQ&scope=https://www.googleapis.com/auth/sdm.service
 
     useEffect(() => {
         if (window != undefined) {
@@ -72,7 +77,7 @@ export default function Home() {
 
             <main className=" flex">
                 <div className="sm:w-6/6   md:w-6/12">
-                    <div className="flex-1 salu bold-text w-6/6 text-4xl mt-20 md:mt-60 md:ml-24">
+                    <div className="flex-1 cursor-none  bold-text w-6/6 text-4xl mt-20 md:mt-60 md:ml-24">
                         <h1 style={{ color: "#FFD500" }}><span>projects </span><span>📽️</span></h1>
                     </div>
                     <p className='sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-90 pg-text tex'>
@@ -82,34 +87,38 @@ export default function Home() {
                         <li className="project-list" onMouseEnter={() => {
                             setImage("/r_map.png")
                             setHidden("")
-                        }} onMouseLeave={onMouseLeave} onClick={rmapPage}>
-                            <h3 className="text-2xl">rmap.rs <span >🔗</span></h3>
-                            <p>A web app that examines source code repositories to create a network of dependencies among files and components. A cool way for programmers to visualize their code.</p>
+                        }} onMouseLeave={onMouseLeave}>
+                            <h3 className="text-2xl hover:underline" onClick={rmapPage}>rmap.rs</h3>
+                            <p>A web app that examines source code repositories to create a network of dependencies among files and components. </p>
+                            {/* A cool way for programmers to visualize their code. */}
+                            <a className='mt-6 pr-1 hover:underline' onClick={rmapSource} style={{ color: "#005BBB" }}>source</a>
                         </li>
                         <li className="mt-2 project-list" onMouseEnter={() => {
                             setImage("/Enigma_(crittografia)_-_Museo_scienza_e_tecnologia_Milano.jpg")
                             setHidden("")
-                        }} onMouseLeave={onMouseLeave} onClick={enigmaPage}>
-                            <h3 className="text-2xl">enigma.rs <span>🔗</span></h3>
+                        }} onMouseLeave={onMouseLeave}>
+                            <h3 className="text-2xl cursor-none">enigma.rs</h3>
                             <p>A terminal based program that mimicks the operations of an Enigma M3/M4 cipher machine developed by Germans during WWII.</p>
+                            <a className='mt-6 pr-1 hover:underline' onClick={enigmaSource} style={{ color: "#005BBB" }}>source</a>
                         </li>
                     </ul>
 
                     <div className="mt-5 md:ml-24 text-lg">
-                        <Link href="/" className=' mt-6 uppercase pr-1' style={{ color: "#005BBB" }}>home</Link><span>|</span>
-                        <a className='pl-1 mt-6 uppercase pr-1' onClick={githubPage} style={{ color: "#005BBB" }}>github</a><span>|</span>
-                        <a className='pl-1 mt-6 uppercase pr-1' onClick={linkedInPage} style={{ color: "#005BBB" }}>linkedin</a><span>|</span>
-                        <Link href="playlist" className='pl-1 mt-6 uppercase pr-1' style={{ color: "#005BBB" }}>playlist</Link>
+                        <Link href="/" className=' mt-6 uppercase pr-1 hover:underline' style={{ color: "#005BBB" }}>home</Link><span>|</span>
+                        <a className='pl-1 mt-6 uppercase pr-1 hover:underline' onClick={githubPage} style={{ color: "#005BBB" }}>github</a><span>|</span>
+                        <a className='pl-1 mt-6 uppercase pr-1 hover:underline' onClick={linkedInPage} style={{ color: "#005BBB" }}>linkedin</a>
+                        {/* <Link href="playlist" className='pl-1 mt-6 uppercase pr-1 hover:underline' style={{ color: "#005BBB" }}>playlist</Link> */}
                     </div>
                     <a className='hidden mt-5 w-32 block md:ml-24 button text-center rounded-lg left-1.5 absolute'>Randomize</a>
                 </div>
 
-                <div className={` w-6/12 mt-20 md:mt-60 grid place-content-center ${hidden}`}>
+                <div className={`w-6/12 mt-20 md:mt-60 grid place-content-center ${hidden} no-display`}>
                     <Image
                         src={image}
                         width={image.includes("r_map") ? 1000 : 500}
                         height={500}
                         sizes='100vw'
+                        priority={true}
                     />
                     {
                         (image.includes("r_map")) ?

@@ -24,14 +24,24 @@ body {
   color: 333 !important;
 }
 
+@media screen and (max-width: 480px) {
+  .no-display {
+    display: none;
+  }
+}
+
 a {
   color: blue;
   text-decoration: none;
   cursor:pointer;
 }
 
-.project-list {
-  cursor:pointer;
+.project-list > h3 {
+  cursor: pointer;
+}
+
+.cursor-none {
+  cursor: default !important;
 }
 
 * {
