@@ -88,19 +88,20 @@ export default function Home() {
                             setImage("/r_map.png")
                             setHidden("")
                         }} onMouseLeave={onMouseLeave}>
-                            <h3 className="text-2xl hover:underline" onClick={rmapPage}>rmap.rs</h3>
+                            <h3 className="text-2xl">rmap.rs</h3>
                             <p>A web app that examines source code repositories to create a network of dependencies among files and components. </p>
                             {/* A cool way for programmers to visualize their code. */}
-                            <a className='mt-6 pr-1 hover:underline' onClick={rmapSource} style={{ color: "#005BBB" }}>source</a>
+                            <a className='mt-6 pr-1 hover:underline' onClick={rmapSource} style={{ color: "#005BBB" }}>source</a><span>|</span>
+                            <a className='mt-6 p-1 hover:underline' onClick={rmapPage} style={{ color: "#005BBB" }}>run</a>
                         </li>
-                        <li className="mt-2 project-list" onMouseEnter={() => {
+                        <div className="mt-3 project-list" onMouseEnter={() => {
                             setImage("/Enigma_(crittografia)_-_Museo_scienza_e_tecnologia_Milano.jpg")
                             setHidden("")
                         }} onMouseLeave={onMouseLeave}>
                             <h3 className="text-2xl cursor-none">enigma.rs</h3>
                             <p>A terminal based program that mimicks the operations of an Enigma M3/M4 cipher machine developed by Germans during WWII.</p>
                             <a className='mt-6 pr-1 hover:underline' onClick={enigmaSource} style={{ color: "#005BBB" }}>source</a>
-                        </li>
+                        </div>
                     </ul>
 
                     <div className="mt-5 md:ml-24 text-lg">
