@@ -15,11 +15,32 @@
   src: url('/3270-Regular.woff');
 }
 
+@font-face {
+  font-family: 'national2';
+  src: url('/test-national-2-regular.woff2');
+}
+
+@font-face {
+  font-family: 'national2-narrow';
+  src: url('/test-national-2-narrow-regular.woff2');
+}
+
+@font-face {
+  font-family: 'apercu-mono';
+  src: url('/apercu-mono-webfont.woff');
+}
+
+@font-face {
+  font-family: 'epilogue';
+  src: url('/Epilogue-VariableFont_wght.ttf');
+}
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'ibm3270' ,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'epilogue' ,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: 333 !important;
 }
