@@ -86,7 +86,7 @@ export default function Home() {
                         <h1 style={{ color: "#FFD500" }}><span>projects </span><span>📽️</span></h1>
                     </div>
                     <p className='sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-90 pg-text tex'>
-                        Here are two ongoing projects that I am currently developing. I have opted to implement both using Rust for the backend, while exploring various front-end frameworks for each.
+                        I have opted to implement both using Rust for the backend, while exploring various front-end frameworks for each.
                     </p>
                     <ul className=" sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-90 pg-text text-l">
                         <li className="project-list" onMouseEnter={() => {
