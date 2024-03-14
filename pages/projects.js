@@ -106,7 +106,7 @@ export default function Home() {
                             <h3 className="text-2xl cursor-none">enigma.rs</h3>
                             <p>A web app that mimicks the operations of an Enigma M3/M4 cipher machine developed by Germans during WWII.</p>
                             <a className='mt-6 pr-1 hover:underline' onClick={enigmaSource} style={{ color: "#005BBB" }}>source</a><span>|</span>
-                            <a className='mt-6 p-1 hover:underline' onClick={rmapPage} style={{ color: "#005BBB" }}>launch</a>
+                            <a className='mt-6 p-1 hover:underline' onClick={enigmaPage} style={{ color: "#005BBB" }}>launch</a>
                         </div>
                     </ul>
 
