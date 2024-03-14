@@ -15,10 +15,7 @@ const greetings = [
   'Привет'
 ]
 
-const warInUkraine = () => {
-  const w = window.open('https://www.google.com/search?q=war%20in%20ukraine#ip=1', '_blank')
-  if (w) w.focus()
-}
+
 
 const githubPage = () => {
   const w = window.open('https://github.com/daveyeb', '_blank')
@@ -80,7 +77,7 @@ export default function Home() {
 
       <main className="">
         <div>
-          <div className="flex-1 salu bold-text w-1/6 text-4xl mt-20 md:mt-60 md:ml-24" onClick={warInUkraine}>
+          <div className="flex-1 salu bold-text w-1/6 text-4xl mt-20 md:mt-60 md:ml-24">
             <h1 style={{ color: "#005BBB" }}><span>{greeting}</span></h1>
             <h1 style={{ color: "#FFD500" }}><span>i&apos;m</span></h1>
             <h1 style={{ color: "#FFD500" }}><span>david</span></h1>
@@ -131,7 +128,7 @@ export default function Home() {
         }
 
         h1 > span {
-          cursor: pointer;
+          cursor: default;
         }
 
         .button:active {
