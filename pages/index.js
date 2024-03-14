@@ -86,7 +86,7 @@ export default function Home() {
             <h1 style={{ color: "#FFD500" }}><span>david</span></h1>
           </div>
           <p className='md:w-2/6 mt-5 md:ml-24 opacity-90 pg-text '>
-            software developer at ibm - working on making a productive environment for ibm employees
+            software developer at ibm, working on making a productive environment for ibm employees
             worldwide and to also deliver the future of IT.
 
           </p>

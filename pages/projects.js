@@ -21,6 +21,11 @@ const rmapPage = () => {
     if (w) w.focus()
 }
 
+const enigmaPage = () => {
+    const w = window.open('https://leptos-enigma.vercel.app/', '_blank')
+    if (w) w.focus()
+}
+
 const rmapSource = () => {
     const w = window.open('https://github.com/daveyeb/rmap.rs', '_blank')
     if (w) w.focus()
@@ -99,8 +104,9 @@ export default function Home() {
                             setHidden("")
                         }} onMouseLeave={onMouseLeave}>
                             <h3 className="text-2xl cursor-none">enigma.rs</h3>
-                            <p>A terminal based program that mimicks the operations of an Enigma M3/M4 cipher machine developed by Germans during WWII.</p>
-                            <a className='mt-6 pr-1 hover:underline' onClick={enigmaSource} style={{ color: "#005BBB" }}>source</a>
+                            <p>A web app that mimicks the operations of an Enigma M3/M4 cipher machine developed by Germans during WWII.</p>
+                            <a className='mt-6 pr-1 hover:underline' onClick={enigmaSource} style={{ color: "#005BBB" }}>source</a><span>|</span>
+                            <a className='mt-6 p-1 hover:underline' onClick={rmapPage} style={{ color: "#005BBB" }}>launch</a>
                         </div>
                     </ul>
 
@@ -124,7 +130,7 @@ export default function Home() {
                     {
                         (image.includes("r_map")) ?
                             <div className='p-5 text-center'>Tech Stacks: Rust, HTMX, Javascript, D3.js, and Web Assembly</div> :
-                            <div className='p-5 text-center'>Tech Stacks: Rust</div>
+                            <div className='p-5 text-center'>Tech Stacks: Rust, Leptos, Web Assembly, TailwindCSS </div>
                     }
                 </div>
 
