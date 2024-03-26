@@ -90,7 +90,7 @@ export default function Home() {
                     </p>
                     <ul className=" sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-90 pg-text text-l">
                         <li className="project-list" onMouseEnter={() => {
-                            setImage("/r_map.png")
+                            setImage("/rmap.gif")
                             setHidden("")
                         }} onMouseLeave={onMouseLeave}>
                             <h3 className="text-2xl">rmap.rs</h3>
@@ -100,7 +100,7 @@ export default function Home() {
                             <a className='mt-6 p-1 hover:underline' onClick={rmapPage} style={{ color: "#005BBB" }}>launch</a>
                         </li>
                         <div className="mt-3 project-list" onMouseEnter={() => {
-                            setImage("/Enigma_(crittografia)_-_Museo_scienza_e_tecnologia_Milano.jpg")
+                            setImage("/enigma.gif")
                             setHidden("")
                         }} onMouseLeave={onMouseLeave}>
                             <h3 className="text-2xl cursor-none">enigma.rs</h3>
@@ -119,18 +119,17 @@ export default function Home() {
                     <a className='hidden mt-5 w-32 block md:ml-24 button text-center rounded-lg left-1.5 absolute'>Randomize</a>
                 </div>
 
-                <div className={`w-6/12 mt-20 md:mt-60 grid place-content-center ${hidden} no-display`}>
+                <div className={`w-6/12 mt-20 md:mt-60  grid place-content-center ${hidden} no-display`}>
                     <Image
                         src={image}
-                        width={image.includes("r_map") ? 1000 : 500}
-                        height={500}
-                        sizes='100vw'
-                        priority={true}
+                        width={image.includes("r_map") ? 1000 : 1000}
+                        height={1000}
+                        className='image'
                     />
                     {
                         (image.includes("r_map")) ?
                             <div className='p-5 text-center'>Tech Stacks: Rust, HTMX, Javascript, D3.js, and Web Assembly</div> :
-                            <div className='p-5 text-center'>Tech Stacks: Rust, Leptos, Web Assembly, TailwindCSS </div>
+                            <div className='p-5 text-center '>Tech Stacks: Rust, Leptos, Web Assembly, TailwindCSS </div>
                     }
                 </div>
 

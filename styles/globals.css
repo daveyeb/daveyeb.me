@@ -57,6 +57,10 @@ a {
   cursor:pointer;
 }
 
+.image {
+  border: 1px solid #444;
+}
+
 .project-list > h3 {
   cursor: default;
 }
