@@ -122,7 +122,7 @@ export default function Home() {
                 <div className={`w-6/12 mt-20 md:mt-60  grid place-content-center ${hidden} no-display`}>
                     <Image
                         src={image}
-                        width={image.includes("r_map") ? 1000 : 1000}
+                        width={1000}
                         height={1000}
                         className='image'
                     />
