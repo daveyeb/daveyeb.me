@@ -127,7 +127,7 @@ export default function Home() {
                         className='image'
                     />
                     {
-                        (image.includes("r_map")) ?
+                        (image.includes("rmap")) ?
                             <div className='p-5 text-center'>Tech Stacks: Rust, HTMX, Javascript, D3.js, and Web Assembly</div> :
                             <div className='p-5 text-center '>Tech Stacks: Rust, Leptos, Web Assembly, TailwindCSS </div>
                     }
