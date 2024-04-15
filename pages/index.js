@@ -78,11 +78,11 @@ export default function Home() {
       <main className="">
         <div>
           <div className="flex-1 salu bold-text w-1/6 text-4xl mt-20 md:mt-60 md:ml-24">
-            <h1 style={{ color: "#005BBB" }}><span>{greeting}</span></h1>
-            <h1 style={{ color: "#FFD500" }}><span>i&apos;m</span></h1>
-            <h1 style={{ color: "#FFD500" }}><span>david</span></h1>
+            <h1 style={{color: "#333"}} ><span>{greeting}</span></h1>
+            <h1 className='text-indigo-600'><span>i&apos;m</span></h1>
+            <h1 className="text-indigo-600"><span>david</span></h1>
           </div>
-          <p className='md:w-2/6 mt-5 md:ml-24 opacity-90 pg-text '>
+          <p className='md:w-2/6 mt-5 md:ml-24 opacity-70 pg-text '>
             an enthusiastic software developer who enjoys working on backend and frontend systems that have real world impact. 
           </p>
 
