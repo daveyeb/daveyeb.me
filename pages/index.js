@@ -1,64 +1,65 @@
-import Head from 'next/head'
-import Script from 'next/script'
-import { useCallback, useEffect, useState } from 'react'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import Script from "next/script";
+import { useCallback, useEffect, useState } from "react";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 const greetings = [
-  'hola',
-  'hello',
-  'bonjour',
-  'hallo',
-  'yo',
-  'salām',
-  'ciao',
-  'Привет'
-]
-
-
+  "hola",
+  "hello",
+  "bonjour",
+  "hallo",
+  "yo",
+  "salām",
+  "ciao",
+  "Привет",
+];
 
 const githubPage = () => {
-  const w = window.open('https://github.com/daveyeb', '_blank')
-  if (w) w.focus()
-}
+  const w = window.open("https://github.com/daveyeb", "_blank");
+  if (w) w.focus();
+};
 
 const linkedInPage = () => {
-  const w = window.open('https://linkedin.com/in/daveyeb', '_blank')
-  if (w) w.focus()
-}
+  const w = window.open("https://linkedin.com/in/daveyeb", "_blank");
+  if (w) w.focus();
+};
 
 export default function Home() {
   const [greeting, setGreeting] = useState(greetings[0]);
   const shuffle = useCallback(() => {
-    setGreeting(greetings[(greetings.indexOf(greeting) + 1) % greetings.length])
-  })
+    setGreeting(
+      greetings[(greetings.indexOf(greeting) + 1) % greetings.length]
+    );
+  });
 
   // https://daveyeb.me/?code=4/0ARtbsJp7XVmenoZ6KzA7pL9i1a2yFBYFDrgCf_22CFJP_nmgMq6AQ8UUke5wW5Z6rWqGMQ&scope=https://www.googleapis.com/auth/sdm.service
 
   useEffect(() => {
     if (window != undefined) {
       window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-691EMM8GS8');
+      gtag("config", "G-691EMM8GS8");
 
       if (window.location.search.includes("code")) {
         // console.log(window.location.pathname + "api/hello/" + window.location.search)
-        fetch(window.location.pathname + "api/hello" + window.location.search).then(res => {
+        fetch(
+          window.location.pathname + "api/hello" + window.location.search
+        ).then((res) => {
           // console.log(res.json())
         });
       }
-
     }
-
-  }, [])
+  }, []);
 
   useEffect(() => {
-    const intervalID = setInterval(shuffle, 1000)
-    return () => clearInterval(intervalID)
-
-  }, [shuffle])
+    const intervalID = setInterval(shuffle, 1000);
+    return () => clearInterval(intervalID);
+  }, [shuffle]);
 
   return (
     <div className={styles.container}>
@@ -66,9 +67,23 @@ export default function Home() {
         <title>david yebōah , swe | home</title>
         <meta name="description" content="personal website of david.yeboah" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="favicon/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="favicon/favicon-16x16.png"
+        />
         <link rel="manifest" href="favicon/site.webmanifest" />
         <meta name="msapplication-config" content="favicon/browserconfig.xml" />
         <meta name="msapplication-TileColor" content="#ffffff" />
@@ -78,29 +93,60 @@ export default function Home() {
       <main className="">
         <div>
           <div className="flex-1 salu bold-text w-1/6 text-4xl mt-20 md:mt-60 md:ml-24">
-            <h1 style={{color: "#333"}} ><span>{greeting}</span></h1>
-            <h1 className='text-indigo-600'><span>i&apos;m</span></h1>
-            <h1 className="text-indigo-600"><span>david</span></h1>
+            <h1 className="text-cyan-600">
+              <span>{greeting}</span>
+            </h1>
+            <h1 style={{ color: "#0e0e0e" }}>
+              <span>i&apos;m</span>
+            </h1>
+            <h1 style={{ color: "#0e0e0e" }}>
+              <span>david</span>
+            </h1>
           </div>
-          <p className='md:w-2/6 mt-5 md:ml-24 opacity-70 pg-text '>
-            an enthusiastic software developer who enjoys working on backend and frontend systems that have real world impact. 
+          <p className="md:w-2/6 mt-5 md:ml-24 opacity-70 pg-text ">
+            I am a software developer based in New York with a passion for
+            building scalable frontend and backend systems that have a
+            real-world impact.
           </p>
 
           <div className="mt-5 md:ml-24 text-lg">
-            <Link href="/projects" className=' mt-6 uppercase  hover:underline  pr-1' style={{ color: "#005BBB" }}>projects</Link><span>|</span>
-            <a className='pl-1 mt-6 uppercase  hover:underline pr-1' onClick={githubPage} style={{ color: "#005BBB" }}>github</a><span>|</span>
-            <a className='pl-1 mt-6 uppercase   hover:underline pr-1' onClick={linkedInPage} style={{ color: "#005BBB" }}>linkedin</a>
+            <Link
+              href="/projects"
+              className=" mt-6 uppercase  hover:underline  pr-1"
+              style={{ color: "#005BBB" }}
+            >
+              projects
+            </Link>
+            <span>|</span>
+            <a
+              className="pl-1 mt-6 uppercase  hover:underline pr-1"
+              onClick={githubPage}
+              style={{ color: "#005BBB" }}
+            >
+              github
+            </a>
+            <span>|</span>
+            <a
+              className="pl-1 mt-6 uppercase   hover:underline pr-1"
+              onClick={linkedInPage}
+              style={{ color: "#005BBB" }}
+            >
+              linkedin
+            </a>
             {/* <Link href="/playlist" className='pl-1 mt-6 uppercase pr-1' style={{ color: "#005BBB" }}>playlist</Link> */}
           </div>
 
-          <a className='hidden mt-5 w-32 block md:ml-24 button text-center rounded-lg left-1.5 absolute'>Randomize</a>
+          <a className="hidden mt-5 w-32 block md:ml-24 button text-center rounded-lg left-1.5 absolute">
+            Randomize
+          </a>
         </div>
 
-
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-691EMM8GS8"></Script>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-691EMM8GS8"
+        ></Script>
       </main>
-      <footer className='fixed bottom-2 uppercase'>
-
+      <footer className="fixed bottom-2 uppercase">
         {/* <a className='block'>musiclists</a>
         <a className='block'>blog</a> */}
       </footer>
@@ -132,8 +178,7 @@ export default function Home() {
         .button:active {
           transform: scale(0.9);
         }
-    `}</style>
+      `}</style>
     </div>
-  )
+  );
 }
-

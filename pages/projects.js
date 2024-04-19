@@ -83,12 +83,12 @@ export default function Home() {
             <main className=" flex">
                 <div className="sm:w-6/6   md:w-6/12">
                     <div className="flex-1 cursor-none  bold-text w-6/6 text-4xl mt-20 md:mt-60 md:ml-24">
-                        <h1 className="text-indigo-600"><span>projects </span><span>📽️</span></h1>
+                        <h1 className='color: #0e0e0e'><span>projects </span><span>📽️</span></h1>
                     </div>
-                    <p className='sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-90 pg-text tex'>
+                    <p className='sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-80 pg-text tex'>
                         I have opted to implement both using Rust for the backend, while exploring various front-end frameworks for each.
                     </p>
-                    <ul className=" sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-90 pg-text text-l">
+                    <ul className=" sm:w-6/6 md:w-4/6 mt-5 md:ml-24 opacity-80 pg-text text-l">
                         <li className="project-list" onMouseEnter={() => {
                             setImage("/rmap.gif")
                             setHidden("")
