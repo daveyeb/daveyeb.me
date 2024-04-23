@@ -4,8 +4,14 @@ import Link from "next/link";
 import { Comfortaa } from "next/font/google";
 import Me from "@/app/components/Me";
 import { GoLinkExternal } from "react-icons/go";
+import { Metadata } from "next";
 
 const comfortaa = Comfortaa({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "David Yebōah | About",
+  description: "Portfolio of David Yebōah, Software Engineer",
+};
 
 export default function About() {
   return (

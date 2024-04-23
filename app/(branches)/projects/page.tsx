@@ -14,6 +14,12 @@ import { IoLogoJavascript } from "react-icons/io";
 import { GoLinkExternal } from "react-icons/go";
 import { TbSourceCode } from "react-icons/tb";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "David Yebōah | Projects",
+  description: "Portfolio of David Yebōah, Software Engineer",
+};
 
 export default function Projects() {
   return (
