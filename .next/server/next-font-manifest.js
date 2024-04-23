@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/thesun/dev/daveyeb.com/app/(root)/page\":[\"static/media/f686a73ef698d4bc-s.p.woff2\"],\"/Users/thesun/dev/daveyeb.com/app/(root)/layout\":[\"static/media/9c8b6b1b20cc50e4-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
