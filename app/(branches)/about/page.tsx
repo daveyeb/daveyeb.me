@@ -74,7 +74,7 @@ export default function About() {
                 <span className="text-sm px-2 ncolor dark:opacity-70">
                   currently
                 </span>{" "}
-                <span className="">Working as a freelance.</span>
+                <span className="">Working as a freelancer.</span>
               </p>
               <p className="flex  text-center justify-center p-1">
                 <span className="text-sm px-2 ncolor dark:opacity-70 pt-1.5">
