@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Crimson_Pro } from "next/font/google";
 import "./globals.css";
 import Nav from "../components/Nav";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Crimson_Pro({ subsets: ["latin"] });
 
@@ -18,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`flex h-full flex-row justify-center ${inter.className}`}>
+      <body
+        className={`flex h-full flex-row justify-center ${inter.className}`}
+      >
+        <div className="noise"></div>
         <Nav />
         {children}
         <Analytics />

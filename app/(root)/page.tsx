@@ -9,7 +9,7 @@ const comfortaa = Comfortaa({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="flex  flex-row min-h-screen  items-center flex-row w-7/12 justify-center text-xl">
+    <main className="flex flex-row min-h-screen  items-center flex-row w-7/12 justify-center text-xl">
       <div className=" w-12/12 flex-col flex md:flex-row gap-x-9">
         <div className="w-12/12 md:w-6/12">
           <h1
@@ -44,7 +44,7 @@ export default function Home() {
             ))}
           </ul>
         </div>
-        <div className="w-6/12  fledx  float-right">
+        <div className="w-6/12  fledx border-dotted float-right">
           <Me/>
         </div>
       </div>

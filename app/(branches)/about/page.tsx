@@ -1,12 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
-
-import { Comfortaa } from "next/font/google";
 import Me from "@/app/components/Me";
 import { GoLinkExternal } from "react-icons/go";
 import { Metadata } from "next";
-
-const comfortaa = Comfortaa({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "David Yebōah | About",

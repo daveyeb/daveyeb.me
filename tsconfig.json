@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/voxel-dog.js", "app/components/Me.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/voxel-dog.js", "app/components/Me.jsx", "app/(branches)/fish/page.jsx"],
   "exclude": ["node_modules"]
 }

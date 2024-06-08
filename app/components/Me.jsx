@@ -4,7 +4,7 @@ import * as THREE from "three";
 
 import { useEffect, useRef, useCallback } from "react";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { loadObjModel } from "../model";
+import { loadGlbMOdel, loadObjModel } from "../model";
 
 function easeOutCirc(x) {
     return Math.sqrt(1 - Math.pow(x - 1, 4))
@@ -83,7 +83,8 @@ function Me() {
       controls.autoRotate = true
       controls.target = target
 
-      loadObjModel(scene, 'david.vox.mtl', 'david.obj')
+      // loadObjModel(scene, 'david.vox.mtl', 'david.obj')
+      loadGlbMOdel(scene, "daivd.glb")
 
 
       var geometry = new THREE.BoxGeometry(1, 1, 1);
