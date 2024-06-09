@@ -30,16 +30,32 @@ export default function Projects() {
             <span className="hcolor sawton_bauhausmedium">projects</span>
           </h1>
           <p className="mt-6 w-6/12">
-            In this collection, you&apos;ll discover projects I&apos;ve tackled, covering UX design, FrontEnd, and Backend development. My work spans different sectors, reflecting my versatility and dedication to crafting solutions for real-world challenges.
+            In this portfolio, you&apos;ll find a variety of projects I&apos;ve
+            undertaken, showcasing my expertise in UX design, frontend, and
+            backend development. My work spans multiple industries, highlighting
+            my versatility and commitment to creating solutions for real-world
+            challenges.
           </p>
         </div>
         <div className="mt-16 image w-9/12">
-          <Image src={"/rmap.gif"} alt={""} height={1902} width={3456} unoptimized></Image>
+          <Image
+            src={"/rmap.gif"}
+            alt={""}
+            height={1902}
+            width={3456}
+            unoptimized
+          ></Image>
         </div>
 
         <div className="col-span-2 mt-16  w-7/12 ">
           <div className="">
-            <Link href={"https://moazl72kkqrgr57xycho2qzqzi0efgpy.lambda-url.us-east-1.on.aws/"} className="flex flex-row" target="_blank">
+            <Link
+              href={
+                "https://moazl72kkqrgr57xycho2qzqzi0efgpy.lambda-url.us-east-1.on.aws/"
+              }
+              className="flex flex-row"
+              target="_blank"
+            >
               <h2 className="text-3xl  hcolor pr-2 sawton_bauhausmedium">
                 rmap.rs
               </h2>
@@ -109,7 +125,11 @@ export default function Projects() {
         </div>
 
         <div className="col-span-2 mt-16  w-7/12">
-          <Link href={"https://leptos-enigma.vercel.app"} className="flex flex-row " target="_blank">
+          <Link
+            href={"https://leptos-enigma.vercel.app"}
+            className="flex flex-row "
+            target="_blank"
+          >
             <h2 className="text-3xl  hcolor pr-2 sawton_bauhausmedium">
               enigma.rs
             </h2>
