@@ -1,0 +1,259 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 14, 13, 12;
+  --background-start-rgb: hsl(32, calc(0.2 * 50%), 98%);
+  --background-end-rgb: hsl(32, calc(0.2 * 50%), 98%);
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 152, 163, 173;
+    --background-start-rgb: 23, 23, 23;
+    --background-end-rgb: 23, 23, 23;
+  }
+
+  .hcolor {
+    color: rgb(228, 228, 228);
+  }
+
+  .ncolor {
+    color: rgb(249, 76, 86);
+  }
+
+  .otwlink:hover {
+    color: rgb(249, 76, 86);
+  }
+
+} */
+
+:root {
+  --foreground-rgb: 152, 163, 173;
+  --background-start-rgb: 23, 23, 23;
+  --background-end-rgb: 23, 23, 23;
+}
+
+.hcolor {
+  color: rgb(228, 228, 228);
+}
+
+.ncolor {
+  color: rgb(249, 76, 86);
+}
+
+.otwlink:hover {
+  color: rgb(249, 76, 86);
+}
+
+@font-face {
+  font-family: "nudicabold_italic";
+  src: url("../public/fonts/nudica-bolditalic-webfont.eot");
+  src: url("../public/fonts/nudica-bolditalic-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/nudica-bolditalic-webfont.woff2") format("woff2"),
+    url("../public/fonts/nudica-bolditalic-webfont.woff") format("woff"),
+    url("../public/fonts/nudica-bolditalic-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nudicalight_italic";
+  src: url("../public/fonts/nudica-lightitalic-webfont.eot");
+  src: url("../public/fonts/nudica-lightitalic-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/nudica-lightitalic-webfont.woff2") format("woff2"),
+    url("../public/fonts/nudica-lightitalic-webfont.woff") format("woff"),
+    url("../public/fonts/nudica-lightitalic-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nudicamedium_italic";
+  src: url("../public/fonts/nudica-mediumitalic-webfont.eot");
+  src: url("../public/fonts/nudica-mediumitalic-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/nudica-mediumitalic-webfont.woff2") format("woff2"),
+    url("../public/fonts/nudica-mediumitalic-webfont.woff") format("woff"),
+    url("../public/fonts/nudica-mediumitalic-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nudicaregular_italic";
+  src: url("../public/fonts/nudica-regularitalic-webfont.eot");
+  src: url("../public/fonts/nudica-regularitalic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/nudica-regularitalic-webfont.woff2") format("woff2"),
+    url("../public/fonts/nudica-regularitalic-webfont.woff") format("woff"),
+    url("../public/fonts/nudica-regularitalic-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nudicathin_italic";
+  src: url("../public/fonts/nudica-thinitalic-webfont.eot");
+  src: url("../public/fonts/nudica-thinitalic-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/nudica-thinitalic-webfont.woff2") format("woff2"),
+    url("../public/fonts/nudica-thinitalic-webfont.woff") format("woff"),
+    url("../public/fonts/nudica-thinitalic-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nudicaultralight_italic";
+  src: url("../public/fonts/nudica-ultralightitalic-webfont.eot");
+  src: url("../public/fonts/nudica-ultralightitalic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/nudica-ultralightitalic-webfont.woff2") format("woff2"),
+    url("../public/fonts/nudica-ultralightitalic-webfont.woff") format("woff"),
+    url("../public/fonts/nudica-ultralightitalic-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nudicabold";
+  src: url("../public/fonts/nudica-bold-webfont.eot");
+  src: url("../public/fonts/nudica-bold-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/nudica-bold-webfont.woff2") format("woff2"),
+    url("../public/fonts/nudica-bold-webfont.woff") format("woff"),
+    url("../public/fonts/nudica-bold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nudicalight";
+  src: url("../public/fonts/nudica-light-webfont.eot");
+  src: url("../public/fonts/nudica-light-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/nudica-light-webfont.woff2") format("woff2"),
+    url("../public/fonts/nudica-light-webfont.woff") format("woff"),
+    url("../public/fonts/nudica-light-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nudicamedium";
+  src: url("../public/fonts/nudica-medium-webfont.eot");
+  src: url("../public/fonts/nudica-medium-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/nudica-medium-webfont.woff2") format("woff2"),
+    url("../public/fonts/nudica-medium-webfont.woff") format("woff"),
+    url("../public/fonts/nudica-medium-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nudicaregular";
+  src: url("../public/fonts/nudica-regular-webfont.eot");
+  src: url("../public/fonts/nudica-regular-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/nudica-regular-webfont.woff2") format("woff2"),
+    url("../public/fonts/nudica-regular-webfont.woff") format("woff"),
+    url("../public/fonts/nudica-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nudicathin";
+  src: url("../public/fonts/nudica-thin-webfont.eot");
+  src: url("../public/fonts/nudica-thin-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/nudica-thin-webfont.woff2") format("woff2"),
+    url("../public/fonts/nudica-thin-webfont.woff") format("woff"),
+    url("../public/fonts/nudica-thin-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nudicaultralight";
+  src: url("../public/fonts/nudica-ultralight-webfont.eot");
+  src: url("../public/fonts/nudica-ultralight-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/nudica-ultralight-webfont.woff2") format("woff2"),
+    url("../public/fonts/nudica-ultralight-webfont.woff") format("woff"),
+    url("../public/fonts/nudica-ultralight-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+.red {
+  border: 1px solid red !important;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+
+/* font families */
+
+.nudicabold_italic {
+  font-family: 'nudicabold_italic' ,'Courier New', Courier, monospace;
+}
+
+.nudicalight_italic {
+  font-family: 'nudicalight_italic' ,'Courier New', Courier, monospace;
+}
+
+.nudicamedium_italic {
+  font-family: 'nudicamedium_italic' ,'Courier New', Courier, monospace;
+}
+.nudicaregular_italic {
+  font-family: 'nudicaregular_italic' ,'Courier New', Courier, monospace;
+}
+
+.nudicathin_italic {
+  font-family: 'nudicathin_italic' ,'Courier New', Courier, monospace;
+}
+
+.nudicaultralight_italic {
+  font-family: 'nudicaultralight_italic' ,'Courier New', Courier, monospace;
+}
+
+.nudicabold {
+  font-family: 'nudicabold' ,'Courier New', Courier, monospace;
+}
+
+
+.nudicalight {
+  font-family: 'nudicalight' ,'Courier New', Courier, monospace;
+}
+
+.nudicamedium {
+  font-family: 'nudicamedium' ,'Courier New', Courier, monospace;
+}
+
+
+.nudicaregular {
+  font-family: 'nudicaregular' ,'Courier New', Courier, monospace;
+}
+
+
+.nudicathin {
+  font-family: 'nudicathin' ,'Courier New', Courier, monospace;
+}
+
+
+.nudicaultralight {
+  font-family: 'nudicaultralight' ,'Courier New', Courier, monospace;
+}

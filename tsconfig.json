@@ -12,15 +12,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "paths": {
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/voxel-dog.js", "app/components/Me.jsx", "app/(branches)/fish/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Voxid.jsx", "pages/context/DocumentContext.tsx"],
   "exclude": ["node_modules"]
 }

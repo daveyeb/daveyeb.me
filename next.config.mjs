@@ -1,12 +1,16 @@
 /** @type {import('next').NextConfig} */
-
-import path from 'path';
-
 const nextConfig = {
-    reactStrictMode: false,
-    sassOptions: {
-        includePaths: [path.join(process.cwd(), 'styles')],
-    },
+  reactStrictMode: true,
+  // async redirects() {
+  //   return [
+  //     // Basic redirect
+  //     {
+  //       source: '/about',
+  //       destination: '/',
+  //       permanent: false,
+  //     },
+  //   ]
+  // }
 };
 
 export default nextConfig;
