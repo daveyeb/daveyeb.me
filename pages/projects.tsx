@@ -12,6 +12,7 @@ import { FaRust } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
 import Link from "next/link";
 import Nav from "@/components/Nav";
+import { Analytics } from "@vercel/analytics/next";
 import Head from "next/head";
 
 export default function Projects() {
@@ -170,6 +171,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
+        <Analytics />
       </main>
     </>
   );
